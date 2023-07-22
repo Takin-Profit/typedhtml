@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "typehtml"
+version = "0.1.0"
+description = ""
+authors = ["g5becks <techstar.dev@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dominate = "^2.8.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
