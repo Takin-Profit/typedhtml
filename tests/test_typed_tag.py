@@ -19,3 +19,14 @@ def test_x_bind_formatted_correctly(get_tags: list[typed_tag]) -> None:
             )
         else:
             assert tag.render() == f"<typed_tag {makeid(x)}></typed_tag>"
+
+
+def test_xh_on_formatted_correctly(get_hx_on_tags: list[typed_tag]) -> None:
+    for x, tag in enumerate(get_hx_on_tags):
+        if x % 2 == 0:
+            assert (
+                tag.render()
+                == f"<html hx-on:click=\"alert('clicked {x}')\" {makeid(x)}></html>"  # noqa: E501
+            )
+        else:
+            assert tag.render() == f"<html {makeid(x)}></html>"

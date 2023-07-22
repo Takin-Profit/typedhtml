@@ -123,7 +123,6 @@ EventName = Union[
         "htmx:xhr:loadstart",
         "htmx:xhr:loadend",
         "htmx:xhr:progress",
-        "",
     ],
     str,
 ]

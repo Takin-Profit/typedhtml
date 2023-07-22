@@ -3,7 +3,7 @@
 # license that can be found in the LICENSE file.
 import pytest
 
-from typehtml.tags import typed_tag
+from typehtml.tags import html, typed_tag
 
 
 @pytest.fixture
@@ -15,5 +15,20 @@ def get_tags() -> list[typed_tag]:
         )
         if i % 2 == 0
         else typed_tag(id=str(i))
+        for i in range(10)
+    ]
+
+
+@pytest.fixture
+def get_hx_on_tags() -> list[typed_tag]:
+    return [
+        html(
+            id=str(i),
+            hx_on={
+                "click": f"alert('clicked {i}')",
+            },
+        )
+        if i % 2 == 0
+        else html(id=str(i))
         for i in range(10)
     ]
