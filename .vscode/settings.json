@@ -21,7 +21,8 @@
         "tabindex",
         "typedhtml",
         "typehtml",
-        "virtualkeyboardpolicy"
+        "virtualkeyboardpolicy",
+        "xdata"
     ],
     "conventionalCommits.scopes": [
         "ui5"

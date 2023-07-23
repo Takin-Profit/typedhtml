@@ -3,6 +3,7 @@
 # license that can be found in the LICENSE file.
 
 
+import json
 from typing import Any
 
 
@@ -15,3 +16,7 @@ def snake_to_camel(snake_str: str) -> str:
 
 def fix_args(**kwargs) -> dict[str, Any]:
     return {snake_to_camel(k): v for k, v in kwargs.items()}
+
+
+def xdata(data: dict[str, Any]) -> str:
+    return json.dumps(data, separators=(",", ":"))
