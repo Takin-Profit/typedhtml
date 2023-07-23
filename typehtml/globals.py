@@ -11,17 +11,17 @@ class GLOBAL_ATTR(TypedDict, total=False):
     accesskey: str
     cls: str
     autocapitalize: Literal["off", "none", "", "sentences", "words", "characters"]
-    contenteditable: Literal["true", "false", "plaintext-only"]
+    contenteditable: Union[bool, Literal["plaintext-only"]]
     contextmenu: str
     dir: Literal["ltr", "rtl", "auto"]
-    draggable: Literal["true", "false"]
+    draggable: bool
     enterkeyhint: Literal["enter", "done", "go", "next", "previous", "search", "send"]
     exportparts: str
     hidden: Union[Literal["", "until-found"], str]
     id: str
-    autofocus: Literal["true", "false"]
+    autofocus: bool
     exportparts: str
-    inert: Literal["true", "false"]
+    inert: bool
     inputmode: Literal[
         "none", "text", "decimal", "numeric", "tel", "search", "email", "url"
     ]
@@ -33,7 +33,7 @@ class GLOBAL_ATTR(TypedDict, total=False):
     nonce: str
     part: str
     slot: str
-    spellcheck: Literal["true", "false"]
+    spellcheck: bool
     style: str
     tabindex: str
     title: str
@@ -79,7 +79,7 @@ class GLOBAL_ATTR(TypedDict, total=False):
     """issues a PATCH to the specified URL"""
     hx_delete: str
     """issues a DELETE to the specified URL"""
-    hx_push_url: Union[Literal["true", "false"], str]
+    hx_push_url: Union[bool, str]
     """pushes the URL into the browser location bar, creating a new history entry"""
     hx_select: str
     """select content to swap in from a response"""
@@ -94,7 +94,7 @@ class GLOBAL_ATTR(TypedDict, total=False):
     """adds values to the parameters to submit with the request (json formatted)"""
     hx_confirm: str
     """shows a confirm() dialog before making the request"""
-    hx_disable: Literal["true", "false"]
+    hx_disable: bool
     """disables htmx processing for the given node and any children nodes"""
     hx_disinherit: str
     """control and disable automatic attribute inheritance for child nodes"""
@@ -104,15 +104,15 @@ class GLOBAL_ATTR(TypedDict, total=False):
     """extensions to use for this element"""
     hx_headers: str
     """adds to the headers that will be submitted with the request"""
-    hx_history: Literal["true", "false"]
+    hx_history: bool
     """prevent sensitive data being saved to the history cache"""
-    hx_history_elt: Literal["true", "false"]
+    hx_history_elt: bool
     hx_include: str
     hx_indicator: str
     hx_params: Union[Literal["*", "none"], str]
-    hx_preserve: Literal["true", "false"]
+    hx_preserve: bool
     hx_prompt: str
-    hx_replace_url: Union[Literal["true", "false"], str]
+    hx_replace_url: Union[bool, str]
     hx_request: str
     hx_sse: str
     hx_sync: str
@@ -178,7 +178,7 @@ class GLOBAL_ATTR(TypedDict, total=False):
     """htmx extension for path dependencies"""
     preload: EventName
     """htmx extension for preloading content"""
-    preload_images: Literal["true", "false"]
+    preload_images: bool
     """htmx extension for preloading images"""
     remove_me: str
     """the remove-me htmx extension  allows you to

@@ -8,6 +8,11 @@ from typing import Literal
 from typehtml.globals import GLOBAL_ATTR
 
 __all__ = [
+    "slot_attr",
+    "meter_attr",
+    "output_attr",
+    "option_attr",
+    "optgroup_attr",
     "base_attr",
     "html_attr",
     "link_attr",
@@ -28,6 +33,20 @@ __all__ = [
     "audio_attr",
     "source_attr",
     "track_attr",
+    "canvas_attr",
+    "map_attr",
+    "area_attr",
+    "colgroup_attr",
+    "td_attr",
+    "th_attr",
+    "form_attr",
+    "fieldset_attr",
+    "input_attr",
+    "label_attr",
+    "button_attr",
+    "select_attr",
+    "progress_attr",
+    "data_attr",
 ]
 
 
@@ -123,7 +142,7 @@ class link_attr(GLOBAL_ATTR, total=False):
 
     as_: str
     crossorigin: CrossOrigin
-    disabled: Literal["true", "false"]
+    disabled: bool
     fetchpriority: Literal["auto", "high", "low", "normal"]
     href: str
     hreflang: str
@@ -143,7 +162,7 @@ class link_attr(GLOBAL_ATTR, total=False):
     sizes: str
     title: str
     type: str
-    blocking: Literal["true", "false"]
+    blocking: bool
 
 
 class meta_attr(GLOBAL_ATTR, total=False):
@@ -239,7 +258,7 @@ class blockquote_attr(GLOBAL_ATTR, total=False):
 class ol_attr(GLOBAL_ATTR, total=False):
     """TypedDict for handling various event properties of a document."""
 
-    reversed: Literal["true", "false"]
+    reversed: bool
     """Indicates whether the list should be displayed in a
     descending order instead of a ascending."""
 
@@ -255,14 +274,14 @@ class ol_attr(GLOBAL_ATTR, total=False):
     type attribute is used on an enclosed <li> element.
     """
 
-    start: str
+    start: int
     """Specifies the start value of an ordered list. Must be an integer."""
 
 
 class li_attr(GLOBAL_ATTR, total=False):
     """TypedDict for handling various event properties of a document."""
 
-    value: str
+    value: int
     """Specifies the value of a list item. Must be an integer."""
 
 
@@ -403,13 +422,13 @@ class object_attr(GLOBAL_ATTR, total=False):
 
 
 class video_attr(GLOBAL_ATTR, total=False):
-    autoplay: Literal["true", "false"]
+    autoplay: bool
     buffered: str
     controls: str
     crossorigin: CrossOrigin
     height: str
     loop: str
-    muted: Literal["true", "false"]
+    muted: bool
     playsinline: str
     poster: str
     src: str
@@ -419,12 +438,12 @@ class video_attr(GLOBAL_ATTR, total=False):
 
 
 class audio_attr(GLOBAL_ATTR, total=False):
-    autoplay: Literal["true", "false"]
+    autoplay: bool
     buffered: str
     controls: str
     crossorigin: CrossOrigin
     loop: str
-    muted: Literal["true", "false"]
+    muted: bool
     playsinline: str
     src: str
     disablepictureinpicture: str
@@ -447,3 +466,204 @@ class track_attr(GLOBAL_ATTR, total=False):
     label: str
     src: str
     srclang: str
+
+
+class canvas_attr(GLOBAL_ATTR, total=False):
+    height: str
+    width: str
+
+
+class map_attr(GLOBAL_ATTR, total=False):
+    name: str
+    """Specifies the name of an image-map."""
+
+
+class colgroup_attr(GLOBAL_ATTR, total=False):
+    span: int
+    """Specifies the number of columns a <col> element should span."""
+
+
+class td_attr(GLOBAL_ATTR, total=False):
+    colspan: int
+    """Specifies the number of columns a <td> element should span."""
+    headers: str
+    rowspan: int
+
+
+class th_attr(GLOBAL_ATTR, total=False):
+    colspan: int
+    """Specifies the number of columns a <td> element should span."""
+    headers: str
+    rowspan: int
+    scope: Literal["row", "col", "rowgroup", "colgroup"]
+    abbr: str
+
+
+class form_attr(GLOBAL_ATTR, total=False):
+    accept_charset: str
+    action: str
+    autocomplete: Literal["on", "off"]
+    enctype: Literal[
+        "application/x-www-form-urlencoded", "multipart/form-data", "text/plain"
+    ]
+    rel: str
+    method: Literal["get", "post", "dialog"]
+    name: str
+    novalidate: bool
+    target: Literal["_blank", "_self", "_parent", "_top"]
+
+
+class fieldset_attr(GLOBAL_ATTR, total=False):
+    disabled: bool
+    form: str
+    name: str
+
+
+class input_attr(GLOBAL_ATTR, total=False):
+    accept: str
+    alt: str
+    autocomplete: Literal["on", "off"]
+    checked: bool
+    capture: Literal["user", "environment"]
+    dirname: str
+    disabled: bool
+    form: str
+    formaction: str
+    formenctype: Literal[
+        "application/x-www-form-urlencoded", "multipart/form-data", "text/plain"
+    ]
+    formmethod: Literal["get", "post", "dialog"]
+    formnovalidate: bool
+    formtarget: Literal["_blank", "_self", "_parent", "_top"]
+    height: str
+    list: str
+    max: str
+    maxlength: int
+    min: str
+    minlength: int
+    multiple: bool
+    name: str
+    pattern: str
+    placeholder: str
+    readonly: bool
+    required: bool
+    size: int
+    src: str
+    step: str
+    type: Literal[
+        "button",
+        "checkbox",
+        "color",
+        "date",
+        "datetime-local",
+        "email",
+        "file",
+        "hidden",
+        "image",
+        "month",
+        "number",
+        "password",
+        "radio",
+        "range",
+        "reset",
+        "search",
+        "submit",
+        "tel",
+        "text",
+        "time",
+        "url",
+        "week",
+    ]
+    value: str
+    width: str
+
+
+class label_attr(GLOBAL_ATTR, total=False):
+    for_: str
+
+
+class button_attr(GLOBAL_ATTR, total=False):
+    autofocus: bool
+    disabled: bool
+    form: str
+    formaction: str
+    formenctype: Literal[
+        "application/x-www-form-urlencoded", "multipart/form-data", "text/plain"
+    ]
+    formmethod: Literal["get", "post", "dialog"]
+    formnovalidate: bool
+    formtarget: Literal["_blank", "_self", "_parent", "_top"]
+    name: str
+    type: Literal["button", "reset", "submit"]
+    value: str
+    popovertarget: str
+    popovertargetaction: Literal["hide", "show", "toggle"]
+
+
+class select_attr(GLOBAL_ATTR, total=False):
+    disabled: bool
+    form: str
+    multiple: bool
+    name: str
+    required: bool
+    size: int
+
+
+class optgroup_attr(GLOBAL_ATTR, total=False):
+    disabled: bool
+    label: str
+
+
+class option_attr(GLOBAL_ATTR, total=False):
+    disabled: bool
+    label: str
+    selected: bool
+    value: str
+
+
+class textarea_attr(GLOBAL_ATTR, total=False):
+    autocomplete: Literal["on", "off"]
+    cols: int
+    dirname: str
+    disabled: bool
+    form: str
+    maxlength: int
+    minlength: int
+    name: str
+    placeholder: str
+    readonly: bool
+    required: bool
+    rows: int
+    wrap: Literal["hard", "soft"]
+
+
+class output_attr(GLOBAL_ATTR, total=False):
+    for_: str
+    form: str
+    name: str
+
+
+class progress_attr(GLOBAL_ATTR, total=False):
+    max: int
+    value: int
+
+
+class meter_attr(GLOBAL_ATTR, total=False):
+    high: int
+    low: int
+    max: int
+    min: int
+    optimum: int
+    value: int
+
+
+class details_attr(GLOBAL_ATTR, total=False):
+    open: bool
+
+
+class data_attr(GLOBAL_ATTR, total=False):
+    value: str
+
+
+class slot_attr(GLOBAL_ATTR, total=False):
+    name: str

@@ -8,11 +8,14 @@
 import typing
 from typing import Any, Mapping, Unpack, cast
 
+from dominate.tags import comment as comment_tag
 from dominate.tags import html_tag
 from dominate.tags import time_ as time_tag
 from dominate.tags import title as title_tag
 
-from .attributes import *  # noqa: F403
+from .attributes import *
+from .attributes import meter_attr  # noqa: F403
+from .attributes import details_attr, textarea_attr
 from .globals import GLOBAL_ATTR, extrakeys
 
 
@@ -34,6 +37,12 @@ def _mk_key(key: str, val: Any) -> str:
             return f"hx-on:{_get_attr(val)}"
         case key if key in extrakeys:
             return key.replace("_", "-")
+        case "xml_base":
+            return "xml:base"
+        case "xml_lang":
+            return "xml:lang"
+        case "xml_space":
+            return "xml:space"
         case _:
             return key
 
@@ -41,6 +50,8 @@ def _mk_key(key: str, val: Any) -> str:
 def _mk_val(data: Any):
     if isinstance(data, dict):
         return list(cast(Mapping[str, str], data).values())[0]
+    if isinstance(data, int):
+        return str(data)
     return "" if isinstance(data, list) else data
 
 
@@ -830,23 +841,416 @@ class track(typed_tag):
     is_single = True
 
 
-class canvas(html_tag):
+class canvas(typed_tag):
     """
     The canvas element provides scripts with a resolution-dependent bitmap
     canvas, which can be used for rendering graphs, game graphics, or other
     visual images on the fly.
     """
 
-    pass
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[canvas_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
 
 
-class map_(html_tag):
+class map_(typed_tag):
     """
     The map element, in conjunction with any area element descendants, defines an
     image map. The element represents its children.
     """
 
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[map_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class area(typed_tag):
+    """
+    The area element represents either a hyperlink with some text and a
+    corresponding area on an image map, or a dead area on an image map.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[area_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+    is_single = True
+
+
+class table(typed_tag):
+    """
+    The table element represents data with more than one dimension, in the form
+    of a table.
+    """
+
     pass
 
 
-_map = map_
+class caption(typed_tag):
+    """
+    The caption element represents the title of the table that is its parent, if
+    it has a parent and that is a table element.
+    """
+
+    pass
+
+
+class colgroup(typed_tag):
+    """
+    The colgroup element represents a group of one or more columns in the table
+    that is its parent, if it has a parent and that is a table element.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[colgroup_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class col(typed_tag):
+    """
+    If a col element has a parent and that is a colgroup element that itself has
+      a parent that is a table element, then the col element represents one or more
+      columns in the column group represented by that colgroup.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[colgroup_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class tbody(typed_tag):
+    """
+    The tbody element represents a block of rows that consist of a body of data
+    for the parent table element, if the tbody element has a parent and it is a
+    table.
+    """
+
+    pass
+
+
+class thead(typed_tag):
+    """
+    The thead element represents the block of rows that consist of the column
+    labels (headers) for the parent table element, if the thead element has a
+    parent and it is a table.
+    """
+
+    pass
+
+
+class tfoot(typed_tag):
+    """
+    The tfoot element represents the block of rows that consist of the column
+    summaries (footers) for the parent table element, if the tfoot element has a
+    parent and it is a table.
+    """
+
+    pass
+
+
+class tr(typed_tag):
+    """
+    The tr element represents a row of cells in a table.
+    """
+
+    pass
+
+
+class td(typed_tag):
+    """
+    The td element represents a data cell in a table.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[td_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class th(typed_tag):
+    """
+    The th element represents a header cell in a table.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[th_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+# Forms
+class form(typed_tag):
+    """
+    The form element represents a collection of form-associated elements, some of
+    which can represent editable values that can be submitted to a server for
+    processing.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[form_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class fieldset(typed_tag):
+    """
+    The fieldset element represents a set of form controls optionally grouped
+    under a common name.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[fieldset_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class legend(typed_tag):
+    """
+    The legend element represents a caption for the rest of the contents of the
+    legend element's parent fieldset element, if any.
+    """
+
+    pass
+
+
+class label(typed_tag):
+    """
+    The label represents a caption in a user interface. The caption can be
+    associated with a specific form control, known as the label element's labeled
+    control, either using for attribute, or by putting the form control inside
+    the label element itself.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[label_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class input_(typed_tag):
+    """
+    The input element represents a typed data field, usually with a form control
+    to allow the user to edit the data.
+    """
+
+    def __init__(  # type: ignore
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[input_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+    is_single = True
+
+
+class button(typed_tag):
+    """
+    The button element represents a button. If the element is not disabled, then
+    the user agent should allow the user to activate the button.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[button_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class select(typed_tag):
+    """
+    The select element represents a control for selecting amongst a set of
+    options.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[select_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class datalist(typed_tag):
+    """
+    The datalist element represents a set of option elements that represent
+    predefined options for other controls. The contents of the element represents
+    fallback content for legacy user agents, intermixed with option elements that
+    represent the predefined options. In the rendering, the datalist element
+    represents nothing and it, along with its children, should be hidden.
+    """
+
+    pass
+
+
+class optgroup(typed_tag):
+    """
+    The optgroup element represents a group of option elements with a common
+    label.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[optgroup_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class option(typed_tag):
+    """
+    The option element represents an option in a select element or as part of a
+    list of suggestions in a datalist element.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[option_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class textarea(typed_tag):
+    """
+    The textarea element represents a multiline plain text edit control for the
+    element's raw value. The contents of the control represent the control's
+    default value.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[textarea_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class output(typed_tag):
+    """
+    The output element represents the result of a calculation.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[output_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class progress(html_tag):
+    """
+    The progress element represents the completion progress of a task. The
+    progress is either indeterminate, indicating that progress is being made but
+    that it is not clear how much more work remains to be done before the task is
+    complete (e.g. because the task is waiting for a remote host to respond), or
+    the progress is a number in the range zero to a maximum, giving the fraction
+    of work that has so far been completed.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[progress_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class meter(typed_tag):
+    """
+    The meter element represents a scalar measurement within a known range, or a
+    fractional value; for example disk usage, the relevance of a query result, or
+    the fraction of a voting population to have selected a particular candidate.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[meter_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+# Interactive elements
+class details(typed_tag):
+    """
+    The details element represents a disclosure widget from which the user can
+    obtain additional information or controls.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[details_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class summary(typed_tag):
+    """
+    The summary element represents a summary, caption, or legend for the rest of
+    the contents of the summary element's parent details element, if any.
+    """
+
+    pass
+
+
+class menu(typed_tag):
+    """
+    The menu element represents a list of commands.
+    """
+
+    pass
+
+
+class data(typed_tag):
+    """
+    The data element represents its contents, along with a machine-readable form
+    of those contents in the value attribute.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[data_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class picture(typed_tag):
+    """
+    The <picture> HTML element contains zero or more <source> elements and one <img>
+    element
+    to offer alternative versions of an image for different display/device scenarios.
+    """
+
+    pass
+
+
+class slot(typed_tag):
+    """
+    The slot HTML element—part of the Web Components technology suite—is a placeholder
+    inside a web component that you can fill with your own markup, which lets you
+    create separate DOM trees and present them together.
+    """
+
+    def __init__(
+        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[slot_attr]
+    ) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class template(typed_tag):
+    """The <template> HTML element is a mechanism for holding HTML that is not to be
+    rendered immediately when a page is loaded but may be instantiated subsequently
+    during runtime using JavaScript.
+    """
+
+    pass
+
+
+class comment(comment_tag):
+    """
+    Normal, one-line comment:
+      >>> print comment("Hello, comments!")
+      <!--Hello, comments!-->
+
+    For IE's "if" statement comments:
+      >>> print comment(p("Upgrade your browser."), condition='lt IE6')
+      <!--[if lt IE6]><p>Upgrade your browser.</p><![endif]-->
+
+    Downlevel conditional comments:
+      >>> print comment(p("You are using a ", em("downlevel"), " browser."),
+              condition='false', downlevel='revealed')
+      <![if false]><p>You are using a <em>downlevel</em> browser.</p><![endif]>
+
+    For more on conditional comments see:
+      http://msdn.microsoft.com/en-us/library/ms537512(VS.85).aspx
+    """
+
+    def __init__(self: typing.Self, msg: str) -> None:
+        super().__init__(msg)
