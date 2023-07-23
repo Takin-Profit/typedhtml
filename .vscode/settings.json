@@ -1,16 +1,23 @@
 {
     "cSpell.words": [
         "accesskey",
+        "blockquote",
         "contenteditable",
         "contextmenu",
         "enterkeyhint",
         "exportparts",
         "extrakeys",
+        "figcaption",
         "htmx",
+        "iframe",
         "inputmode",
         "itemid",
         "itemprop",
         "itemref",
+        "makeid",
+        "nunjucks",
+        "referrerpolicy",
+        "samp",
         "tabindex",
         "typehtml",
         "virtualkeyboardpolicy"
