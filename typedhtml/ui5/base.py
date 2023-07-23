@@ -2,7 +2,7 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from typing import Self, Unpack
+from typing import Literal, Self, TypedDict, Unpack
 
 from typedhtml.globals import GLOBAL_ATTR
 from typedhtml.tags import typed_tag
@@ -18,3 +18,8 @@ class ui5_tag(typed_tag):
 
     def __init__(self: Self, **kwargs: Unpack[ui5_tag_props]) -> None:
         super().__init__(**fix_args(**kwargs))
+
+
+class AccessibilityAttributes(TypedDict, total=False):
+    expanded: bool
+    has_popup: Literal["Dialog", "Grid", "Listbox", "Menu", "Tree"]
