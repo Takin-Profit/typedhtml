@@ -4,7 +4,7 @@
 from collections.abc import Mapping
 from typing import Literal, TypedDict, Union
 
-from typehtml.events import EventName
+from typedhtml.events import EventName
 
 
 class GLOBAL_ATTR(TypedDict, total=False):
@@ -66,7 +66,7 @@ class GLOBAL_ATTR(TypedDict, total=False):
         ],
         str,
     ]
-    hx_boost: Literal["true"]
+    hx_boost: Literal[True]
     """add or remove progressive enhancement for links and forms"""
     hx_on: dict[EventName, str]
     hx_get: str
@@ -129,13 +129,13 @@ class GLOBAL_ATTR(TypedDict, total=False):
     x_model: str
     x_modelable: str
     x_for: str
-    # TODO: Model this correctly to match Alpine x_transition: Union[Literal["true"], Optional[list[str]]]
+    # TODO: Model this correctly to match Alpine x_transition: Union[Literal[True], Optional[list[str]]]
     """Alpine.js transition directives"""
     x_effect: str
-    x_ignore: Literal["true"]
+    x_ignore: Literal[True]
     """Alpine directive https://alpinejs.dev/directives/ignore"""
     x_ref: str
-    x_cloak: Literal["true"]
+    x_cloak: Literal[True]
     """hides the element it's attached to until Alpine is fully loaded on the page."""
     x_teleport: str
     x_if: str
@@ -173,7 +173,7 @@ class GLOBAL_ATTR(TypedDict, total=False):
     """htmx loading-states extension"""
     data_loading_path: str
     """htmx loading-states extension"""
-    data_loading_states: Literal["true"]
+    data_loading_states: Literal[True]
     path_deps: str
     """htmx extension for path dependencies"""
     preload: EventName

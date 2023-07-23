@@ -19,7 +19,11 @@
         "referrerpolicy",
         "samp",
         "tabindex",
+        "typedhtml",
         "typehtml",
         "virtualkeyboardpolicy"
+    ],
+    "conventionalCommits.scopes": [
+        "ui5"
     ]
 }

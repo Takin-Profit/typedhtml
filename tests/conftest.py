@@ -3,7 +3,7 @@
 # license that can be found in the LICENSE file.
 import pytest
 
-from typehtml.tags import html, typed_tag
+from typedhtml.tags import html, typed_tag
 
 
 @pytest.fixture

@@ -5,7 +5,7 @@
 
 from typing import Literal
 
-from typehtml.globals import GLOBAL_ATTR
+from typedhtml.globals import GLOBAL_ATTR
 
 __all__ = [
     "slot_attr",
