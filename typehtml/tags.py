@@ -14,8 +14,11 @@ from dominate.tags import time_ as time_tag
 from dominate.tags import title as title_tag
 
 from .attributes import *
-from .attributes import meter_attr  # noqa: F403
-from .attributes import details_attr, textarea_attr
+from .attributes import (
+    details_attr,
+    meter_attr,  # noqa: F403
+    textarea_attr,
+)
 from .globals import GLOBAL_ATTR, extrakeys
 
 
@@ -61,7 +64,7 @@ class typed_tag(html_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[GLOBAL_ATTR]
+        self: typing.Self, *args: Any, **kwargs: Unpack[GLOBAL_ATTR]
     ) -> None:
         fixed = {_mk_key(k, v): _mk_val(v) for k, v in kwargs.items()}
 
