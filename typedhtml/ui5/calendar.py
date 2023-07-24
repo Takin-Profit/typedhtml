@@ -24,6 +24,6 @@ class calendar(ui5_tag, total=False):
     preventDefault() for the selected-dates-change event. This is useful if you want to
     control the selected dates externally."""
 
-    def __init__(self: Self, **kwargs: Unpack[calendar_props]) -> None:
+    def __init__(self: Self, *args, **kwargs: Unpack[calendar_props]) -> None:
         self.tagname = "ui5-calendar"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

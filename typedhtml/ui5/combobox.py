@@ -26,6 +26,6 @@ class combobox(ui5_tag):
 
     It is commonly used to enable users to select an option from a predefined list."""
 
-    def __init__(self, **kwargs: Unpack[combobox_props]):
+    def __init__(self, *args, **kwargs: Unpack[combobox_props]):
         self.tagname = "ui5-combobox"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

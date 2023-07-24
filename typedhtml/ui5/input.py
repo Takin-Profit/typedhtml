@@ -31,6 +31,6 @@ class input(ui5_tag):
     Additionally, you can provide suggestionItems,
     that are displayed in a popover right under the input."""
 
-    def __init__(self, **kwargs: Unpack[ui5_input_props]) -> None:
+    def __init__(self, *args, **kwargs: Unpack[ui5_input_props]) -> None:
         self.tagname = "ui5-input"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

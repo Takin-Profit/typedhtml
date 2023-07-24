@@ -20,6 +20,6 @@ class badge(ui5_tag):
     """Small numerical value or non-numeric character, typically rendered in a
     small circle."""
 
-    def __init__(self: Self, **kwargs: Unpack[badge_props]) -> None:
+    def __init__(self: Self, *args, **kwargs: Unpack[badge_props]) -> None:
         self.tagname = "ui5-badge"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

@@ -25,6 +25,6 @@ class file_uploader(ui5_tag):
     by your choice to trigger the file upload, by using the default slot. Furthermore,
     you can set the property "hideInput" to "true" to hide the input field."""
 
-    def __init__(self, **kwargs: Unpack[file_uploader_props]):
+    def __init__(self, *args, **kwargs: Unpack[file_uploader_props]):
         self.tagname = "ui5-file-uploader"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

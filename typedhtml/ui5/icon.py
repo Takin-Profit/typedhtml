@@ -30,6 +30,6 @@ class icon(ui5_tag):
     the ui5-icon component is used: as a purely decorative element,
     or as an interactive element that can be focused and clicked."""
 
-    def __init__(self, **kwargs: Unpack[icon_props]) -> None:
+    def __init__(self, *args, **kwargs: Unpack[icon_props]) -> None:
         self.tagname = "ui5-icon"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

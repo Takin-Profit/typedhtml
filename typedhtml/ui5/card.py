@@ -37,6 +37,6 @@ class card_header(ui5_tag):
     """The ui5-card-header is a component, used within the ui5-card, that
     displays a title, subtitle, separators and an avatar."""
 
-    def __init__(self: Self, **kwargs: Unpack[card_header_props]) -> None:
+    def __init__(self: Self, *args, **kwargs: Unpack[card_header_props]) -> None:
         self.tagname = "ui5-card-header"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

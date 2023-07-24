@@ -27,6 +27,6 @@ class date_picker(ui5_tag):
     date using touch, mouse, or keyboard input. It consists of two parts: the date input
     field and the date picker."""
 
-    def __init__(self, **kwargs: Unpack[datepicker_props]):
+    def __init__(self, *args, **kwargs: Unpack[datepicker_props]):
         self.tagname = "ui5-date-picker"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

@@ -26,6 +26,6 @@ class button(ui5_tag):
     It enables users to trigger actions by clicking or tapping the ui5-button,
     or by pressing certain keyboard keys, such as Enter."""
 
-    def __init__(self, **kwargs: Unpack[button_props]) -> None:
+    def __init__(self, *args, **kwargs: Unpack[button_props]) -> None:
         self.tagname = "ui5-button"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

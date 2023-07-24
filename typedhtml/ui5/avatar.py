@@ -52,9 +52,9 @@ class avatar(ui5_tag):
     https://sap.github.io/ui5-webcomponents/playground/?path=/docs/main-avatar--docs
     """
 
-    def __init__(self: Self, **kwargs: Unpack[avatar_props]) -> None:
+    def __init__(self: Self, *args, **kwargs: Unpack[avatar_props]) -> None:
         self.tagname = "ui5-avatar"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class avatar_group_props(ui5_tag_props, total=False):
@@ -89,6 +89,6 @@ class avatar_group(ui5_tag):
         https://sap.github.io/ui5-webcomponents/playground/?path=/docs/main-avatar-group--docs
     """
 
-    def __init__(self: Self, **kwargs: Unpack[avatar_group_props]) -> None:
+    def __init__(self: Self, *args, **kwargs: Unpack[avatar_group_props]) -> None:
         self.tagname = "ui5-avatar-group"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

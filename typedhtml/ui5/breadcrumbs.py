@@ -23,9 +23,9 @@ class breadcrumbs_props(ui5_tag_props, total=False):
 class breadcrumbs(ui5_tag):
     """Displays a list of links that shows the navigation path."""
 
-    def __init__(self, **kwargs: Unpack[breadcrumbs_props]) -> None:
+    def __init__(self, *args, **kwargs: Unpack[breadcrumbs_props]) -> None:
         self.tagname = "ui5-breadcrumbs"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class breadcrumbs_item_props(ui5_tag_props, total=False):
@@ -39,6 +39,6 @@ class breadcrumbs_item(ui5_tag):
     The user can navigate to the previous location in the app when the user clicks
     on the ui5-breadcrumbs item."""
 
-    def __init__(self, **kwargs: Unpack[breadcrumbs_item_props]) -> None:
+    def __init__(self, *args, **kwargs: Unpack[breadcrumbs_item_props]) -> None:
         self.tagname = "ui5-breadcrumbs-item"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

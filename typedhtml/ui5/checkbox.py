@@ -36,6 +36,6 @@ class checkbox(ui5_tag):
     The ui5-checkbox component only has 2 states - checked and unchecked.
     Clicking or tapping toggles the ui5-checkbox between checked and unchecked state."""
 
-    def __init__(self: Self, **kwargs: Unpack[checkbox_props]) -> None:
+    def __init__(self: Self, *args, **kwargs: Unpack[checkbox_props]) -> None:
         self.tagname = "ui5-checkbox"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

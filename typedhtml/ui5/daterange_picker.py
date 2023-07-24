@@ -21,6 +21,6 @@ class daterange_picker(ui5_tag, total=False):
     """The DateRangePicker enables the users to enter a localized date range using
     touch, mouse, keyboard input, or by selecting a date range in the calendar."""
 
-    def __init__(self, **kwargs: Unpack[daterange_picker_props]):
+    def __init__(self, *args, **kwargs: Unpack[daterange_picker_props]):
         self.tagname = "ui5-daterange-picker"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

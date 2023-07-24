@@ -12,9 +12,9 @@ class color_palette(ui5_tag):
     inside the default slot of the ui5-color-palette.
     """
 
-    def __init__(self, **kwargs):
+    def __init__(self, *args, **kwargs):
         self.tagname = "ui5-color-palette"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class color_palette_item_props(ui5_tag_props, total=False):
@@ -25,9 +25,9 @@ class color_palette_item(ui5_tag):
     """The ui5-color-palette-item component represents the color in
     the ui5-color-palette."""
 
-    def __init__(self, **kwargs: Unpack[color_palette_item_props]):
+    def __init__(self, *args, **kwargs: Unpack[color_palette_item_props]):
         self.tagname = "ui5-color-palette-item"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class color_palette_popover_props(ui5_tag_props, total=False):
@@ -42,6 +42,6 @@ class color_palette_popover(ui5_tag):
     Overview The ColorPalettePopover provides the users with a slot to predefine colors.
     """
 
-    def __init__(self, **kwargs: Unpack[color_palette_popover_props]):
+    def __init__(self, *args, **kwargs: Unpack[color_palette_popover_props]):
         self.tagname = "ui5-color-palette-popover"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

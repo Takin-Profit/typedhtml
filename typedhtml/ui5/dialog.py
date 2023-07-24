@@ -19,6 +19,6 @@ class dialog(ui5_tag):
     """The Dialog component is used to temporarily display some information
     in a simple popup."""
 
-    def __init__(self, **kwargs: Unpack[dialog_props]) -> None:
+    def __init__(self, *args, **kwargs: Unpack[dialog_props]) -> None:
         self.tagname = "ui5-dialog"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

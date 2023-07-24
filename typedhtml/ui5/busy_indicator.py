@@ -19,6 +19,6 @@ class busy_indicator(ui5_tag):
     You can change the size of the `BusyIndicator` with the `size` property or set your
     custom CSS size class."""
 
-    def __init__(self, **kwargs: Unpack[busy_indicator_props]) -> None:
+    def __init__(self, *args, **kwargs: Unpack[busy_indicator_props]) -> None:
         self.tagname = "ui5-busy-indicator"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

@@ -15,7 +15,6 @@ class color_picker(ui5_tag):
     """The ui5-color-picker allows users to choose any color and provides different
     input options for selecting colors."""
 
-    def __init__(self, **kwargs: Unpack[color_picker_props]):
+    def __init__(self, *args, **kwargs: Unpack[color_picker_props]):
         self.tagname = "ui5-color-picker"
-        super().__init__(**kwargs)
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)

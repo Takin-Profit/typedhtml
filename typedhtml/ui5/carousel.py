@@ -29,6 +29,6 @@ class carousel(ui5_tag):
     shorcuts.
     on mobile - the user can use swipe gestures."""
 
-    def __init__(self: Self, **kwargs: Unpack[carousel_props]) -> None:
+    def __init__(self: Self, *args, **kwargs: Unpack[carousel_props]) -> None:
         self.tagname = "ui5-carousel"
-        super().__init__(**kwargs)
+        super().__init__(*args, **kwargs)
