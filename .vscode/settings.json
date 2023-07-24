@@ -4,6 +4,7 @@
         "blockquote",
         "contenteditable",
         "contextmenu",
+        "daterange",
         "enterkeyhint",
         "exportparts",
         "extrakeys",
