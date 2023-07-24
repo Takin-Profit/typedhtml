@@ -14,11 +14,8 @@ from dominate.tags import time_ as time_tag
 from dominate.tags import title as title_tag
 
 from .attributes import *
-from .attributes import (
-    details_attr,
-    meter_attr,  # noqa: F403
-    textarea_attr,
-)
+from .attributes import meter_attr  # noqa: F403
+from .attributes import details_attr, textarea_attr
 from .globals import GLOBAL_ATTR, extrakeys
 
 
@@ -77,7 +74,7 @@ class a(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[a_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[a_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -108,7 +105,7 @@ class html(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[html_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[html_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -142,7 +139,7 @@ class base(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[base_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[base_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -155,7 +152,7 @@ class link(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[link_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[link_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -169,7 +166,7 @@ class meta(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[meta_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[meta_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -180,7 +177,7 @@ class style(typed_tag):
     """The script element allows authors to include dynamic script and data"""
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[style_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[style_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -204,7 +201,7 @@ class body(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[body_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[body_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -366,7 +363,7 @@ class blockquote(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[blockquote_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[blockquote_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -377,7 +374,7 @@ class ol(typed_tag):
     such that changing the order would change the meaning of the document."""
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[ol_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[ol_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -399,7 +396,7 @@ class li(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[li_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[li_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -494,7 +491,7 @@ class s(typed_tag):
     pass
 
 
-class cite(html_tag):
+class cite(typed_tag):
     """
     The cite element represents the title of a work (e.g. a book, a paper, an
     essay, a poem, a score, a song, a script, a film, a TV show, a game, a
@@ -507,7 +504,7 @@ class cite(html_tag):
     pass
 
 
-class q(html_tag):
+class q(typed_tag):
     """
     The q element represents some phrasing content quoted from another source.
     """
@@ -515,7 +512,7 @@ class q(html_tag):
     pass
 
 
-class dfn(html_tag):
+class dfn(typed_tag):
     """
     The dfn element represents the defining instance of a term. The paragraph,
     description list group, or section that is the nearest ancestor of the dfn
@@ -534,7 +531,7 @@ class time_(typed_tag, time_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[time_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[time_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -736,10 +733,20 @@ class del_(typed_tag):
     The del element represents a removal from the document.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[del_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[del_attr]) -> None:
         super().__init__(*args, **kwargs)
+
+
+class script(typed_tag):
+    """
+    The script element allows authors to include dynamic script and data blocks
+    in their documents. The element does not represent content for the user.
+    """
+
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[script_attr]) -> None:
+        super().__init__(*args, **kwargs)
+
+    is_pretty = False
 
 
 class img(typed_tag):
@@ -747,9 +754,7 @@ class img(typed_tag):
     An img element represents an image.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[img_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[img_attr]) -> None:
         super().__init__(*args, **kwargs)
 
     is_single = True
@@ -760,9 +765,7 @@ class iframe(typed_tag):
     The iframe element represents a nested browsing context.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[iframe_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[iframe_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -772,9 +775,7 @@ class embed(typed_tag):
     non-HTML) application or interactive content.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[embed_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[embed_attr]) -> None:
         super().__init__(*args, **kwargs)
 
     is_single = True
@@ -787,9 +788,7 @@ class object_(typed_tag):
     browsing context, or as an external resource to be processed by a plugin.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[object_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[object_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -799,9 +798,7 @@ class video(typed_tag):
     captions.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[video_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[video_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -810,9 +807,7 @@ class audio(typed_tag):
     An audio element represents a sound or audio stream.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[audio_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[audio_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -822,9 +817,7 @@ class source(typed_tag):
     resources for media elements. It does not represent anything on its own.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[source_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[source_attr]) -> None:
         super().__init__(*args, **kwargs)
 
     is_single = True
@@ -836,9 +829,7 @@ class track(typed_tag):
     tracks for media elements. It does not represent anything on its own.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[track_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[track_attr]) -> None:
         super().__init__(*args, **kwargs)
 
     is_single = True
@@ -851,9 +842,7 @@ class canvas(typed_tag):
     visual images on the fly.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[canvas_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[canvas_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -863,9 +852,7 @@ class map_(typed_tag):
     image map. The element represents its children.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[map_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[map_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -875,9 +862,7 @@ class area(typed_tag):
     corresponding area on an image map, or a dead area on an image map.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[area_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[area_attr]) -> None:
         super().__init__(*args, **kwargs)
 
     is_single = True
@@ -908,7 +893,7 @@ class colgroup(typed_tag):
     """
 
     def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[colgroup_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[colgroup_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -921,7 +906,7 @@ class col(typed_tag):
     """
 
     def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[colgroup_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[colgroup_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -969,9 +954,7 @@ class td(typed_tag):
     The td element represents a data cell in a table.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[td_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[td_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -980,9 +963,7 @@ class th(typed_tag):
     The th element represents a header cell in a table.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[th_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[th_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -994,9 +975,7 @@ class form(typed_tag):
     processing.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[form_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[form_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1007,7 +986,7 @@ class fieldset(typed_tag):
     """
 
     def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[fieldset_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[fieldset_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -1029,9 +1008,7 @@ class label(typed_tag):
     the label element itself.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[label_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[label_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1042,7 +1019,7 @@ class input_(typed_tag):
     """
 
     def __init__(  # type: ignore
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[input_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[input_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -1055,9 +1032,7 @@ class button(typed_tag):
     the user agent should allow the user to activate the button.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[button_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[button_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1067,9 +1042,7 @@ class select(typed_tag):
     options.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[select_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[select_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1092,7 +1065,7 @@ class optgroup(typed_tag):
     """
 
     def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[optgroup_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[optgroup_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -1103,9 +1076,7 @@ class option(typed_tag):
     list of suggestions in a datalist element.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[option_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[option_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1117,7 +1088,7 @@ class textarea(typed_tag):
     """
 
     def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[textarea_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[textarea_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -1127,13 +1098,11 @@ class output(typed_tag):
     The output element represents the result of a calculation.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[output_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[output_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
-class progress(html_tag):
+class progress(typed_tag):
     """
     The progress element represents the completion progress of a task. The
     progress is either indeterminate, indicating that progress is being made but
@@ -1144,7 +1113,7 @@ class progress(html_tag):
     """
 
     def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[progress_attr]
+        self: typing.Self, *args: Any, **kwargs: Unpack[progress_attr]
     ) -> None:
         super().__init__(*args, **kwargs)
 
@@ -1156,9 +1125,7 @@ class meter(typed_tag):
     the fraction of a voting population to have selected a particular candidate.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[meter_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[meter_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1169,9 +1136,7 @@ class details(typed_tag):
     obtain additional information or controls.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[details_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[details_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1198,9 +1163,7 @@ class data(typed_tag):
     of those contents in the value attribute.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[data_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[data_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 
@@ -1221,9 +1184,7 @@ class slot(typed_tag):
     create separate DOM trees and present them together.
     """
 
-    def __init__(
-        self: typing.Self, *args: tuple[Any], **kwargs: Unpack[slot_attr]
-    ) -> None:
+    def __init__(self: typing.Self, *args: Any, **kwargs: Unpack[slot_attr]) -> None:
         super().__init__(*args, **kwargs)
 
 

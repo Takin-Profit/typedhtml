@@ -8,6 +8,7 @@ from typing import Literal
 from typedhtml.globals import GLOBAL_ATTR
 
 __all__ = [
+    "script_attr",
     "slot_attr",
     "meter_attr",
     "output_attr",
@@ -667,3 +668,32 @@ class data_attr(GLOBAL_ATTR, total=False):
 
 class slot_attr(GLOBAL_ATTR, total=False):
     name: str
+
+
+class script_attr(GLOBAL_ATTR, total=False):
+    async_: bool
+    crossorigin: CrossOrigin
+    defer: bool
+    integrity: str
+    nomodule: bool
+    nonce: str
+    fetchpriority: Literal["auto", "high", "low"]
+    referrerpolicy: Literal[
+        "no-referrer",
+        "no-referrer-when-downgrade",
+        "origin",
+        "origin-when-cross-origin",
+        "unsafe-url",
+        "same-origin",
+        "strict-origin",
+        "strict-origin-when-cross-origin",
+    ]
+    src: str
+    type: Literal[
+        "module",
+        "text/javascript",
+        "text/ecmascript",
+        "application/javascript",
+        "application/ecmascript",
+        "importmap",
+    ]
