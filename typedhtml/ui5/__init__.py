@@ -73,8 +73,26 @@ from .split_button import split_button, split_button_props
 from .step_input import step_input, step_input_props
 from .switch import switch, switch_props
 from .tab_container import tab_container, tab_container_props
+from .table import (
+    table,
+    table_cell,
+    table_column,
+    table_column_props,
+    table_group_row,
+    table_props,
+    table_row,
+    table_row_props,
+)
 
 __all__ = [
+    "table_cell",
+    "table",
+    "table_column",
+    "table_column_props",
+    "table_group_row",
+    "table_props",
+    "table_row",
+    "table_row_props",
     "tab_container",
     "tab_container_props",
     "switch",
@@ -194,6 +212,13 @@ __all__ = [
     "busy_indicator_props",
     "breadcrumbs",
     "breadcrumbs_item",
+    "breadcrumbs_item_props",
+    "breadcrumbs_props",
+    "busy_indicator",
+    "busy_indicator_props",
+    "breadcrumbs_props",
+    "busy_indicator",
+    "busy_indicator_props",
     "breadcrumbs_item_props",
     "breadcrumbs_props",
     "busy_indicator",
