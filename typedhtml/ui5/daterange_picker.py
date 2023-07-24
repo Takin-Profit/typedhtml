@@ -17,7 +17,7 @@ class daterange_picker_props(ui5_tag_props, total=False):
     format_pattern: str
 
 
-class daterange_picker(ui5_tag, total=False):
+class daterange_picker(ui5_tag):
     """The DateRangePicker enables the users to enter a localized date range using
     touch, mouse, keyboard input, or by selecting a date range in the calendar."""
 

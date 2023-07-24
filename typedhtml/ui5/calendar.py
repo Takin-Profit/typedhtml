@@ -13,7 +13,7 @@ class calendar_props(ui5_tag_props, total=False):
     selection_mode: Literal["Single", "Range", "Multiple"]
 
 
-class calendar(ui5_tag, total=False):
+class calendar(ui5_tag):
     """The ui5-calendar component allows users to select one or more dates.
 
     Currently selected dates are represented with instances of ui5-date as children
