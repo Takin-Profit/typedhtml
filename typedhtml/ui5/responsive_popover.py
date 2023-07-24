@@ -5,7 +5,7 @@
 from typing import Unpack
 
 from typedhtml.ui5.base import ui5_tag
-from typedhtml.ui5.popoveer import popover_props
+from typedhtml.ui5.popover import popover_props
 
 
 class responsive_popover(ui5_tag):
