@@ -37,3 +37,50 @@ class list(ui5_tag):
     def __init__(self, *args, **kwargs: Unpack[list_props]) -> None:
         self.tagname = "ui5-list"
         super().__init__(*args, **kwargs)
+
+
+class list_item_props(ui5_tag_props, total=False):
+    accessible_name: str
+    accessible_text: str
+    accessible_text_state: Literal[
+        "None",
+        "Success",
+        "Warning",
+        "Error",
+        "Information",
+    ]
+    description: str
+    icon: str
+    icon_end: bool
+    image: str
+
+
+class li(ui5_tag):
+    """The ListItem component represents the items to be displayed in the
+    List."""
+
+    def __init__(self, *args, **kwargs: Unpack[list_item_props]) -> None:
+        self.tagname = "ui5-li"
+        super().__init__(*args, **kwargs)
+
+
+class li_groupheader_props(ui5_tag_props, total=False):
+    accessible_name: str
+
+
+class li_groupheader(ui5_tag):
+    """The GroupHeaderListItem component is used to group list items inside a
+    List."""
+
+    def __init__(self, *args, **kwargs: Unpack[li_groupheader_props]) -> None:
+        self.tagname = "ui5-li-groupheader"
+        super().__init__(*args, **kwargs)
+
+
+class li_custom(ui5_tag):
+    """The CustomListItem component allows the usage of any HTML content as an
+    item of the List."""
+
+    def __init__(self, *args, **kwargs: Unpack[li_groupheader_props]) -> None:
+        self.tagname = "ui5-li-custom"
+        super().__init__(*args, **kwargs)
