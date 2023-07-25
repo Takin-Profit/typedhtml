@@ -34,3 +34,9 @@ class shell_bar_item_props(ui5_tag_props, total=False):
     count: str
     icon: str
     text: str
+
+
+class shell_bar_item(ui5_tag):
+    def __init__(self, *args, **kwargs: Unpack[shell_bar_item_props]):
+        self.tagname = "ui5-shellbar-item"
+        super().__init__(*args, **kwargs)
