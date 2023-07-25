@@ -30,3 +30,21 @@ class upload_collection(ui5_tag):
     def __init__(self, *args, **kwargs: Unpack[upload_collection_props]):
         self.tagname = "ui5-upload-collection"
         super().__init__(*args, **kwargs)
+
+
+class upload_collection_item_props(ui5_tag_props, total=False):
+    disable_delete_button: bool
+    file: str
+    file_name: str
+    file_name_clickable: bool
+    hide_delete_button: bool
+    hide_retry_button: bool
+    hide_terminate_button: bool
+    progress: int
+    upload_state: int
+
+
+class upload_collection_item(ui5_tag):
+    def __init__(self, *args, **kwargs: Unpack[upload_collection_item_props]):
+        self.tagname = "ui5-upload-collection-item"
+        super().__init__(*args, **kwargs)
