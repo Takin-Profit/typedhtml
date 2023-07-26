@@ -7,15 +7,12 @@ import json
 from typing import Any
 
 
-def snake_to_camel(snake_str: str) -> str:
-    components = snake_str.strip("_").split(
-        "_"
-    )  # strip leading and trailing underscores before splitting
-    return components[0] + "".join(x.title() for x in components[1:])
+def snake_to_html(snake_str: str) -> str:
+    return snake_str.replace("_", "-").strip("-")
 
 
 def fix_args(**kwargs) -> dict[str, Any]:
-    return {snake_to_camel(k): v for k, v in kwargs.items()}
+    return {snake_to_html(k): v for k, v in kwargs.items()}
 
 
 def xdata(data: dict[str, Any]) -> str:

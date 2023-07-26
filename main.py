@@ -15,3 +15,5 @@ print(ui.badge(color_scheme=1).render())
 print(doc(title="Hello, world!").render())
 
 print(vsd(accesskey="some key", autofocus=False).render())
+
+print(ui.shell_bar(primary_title="Hello, world!").render())
