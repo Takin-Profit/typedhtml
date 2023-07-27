@@ -14,4 +14,4 @@ class bar_props(ui5_tag_props, total=False):
 class bar(ui5_tag):
     def __init__(self, *args, **kwargs: Unpack[bar_props]) -> None:
         self.tagname = "ui5-bar"
-        super().__init__("ui5-bar", *args, **kwargs)
+        super().__init__(*args, **kwargs)
