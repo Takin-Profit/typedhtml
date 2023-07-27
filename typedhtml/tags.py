@@ -14,15 +14,22 @@ from dominate.tags import time_ as time_tag
 from dominate.tags import title as title_tag
 
 from .attributes import *
-from .attributes import meter_attr  # noqa: F403
-from .attributes import details_attr, textarea_attr
-from .globals import GLOBAL_ATTR, extrakeys
+from .attributes import (
+    details_attr,
+    meter_attr,  # noqa: F403
+    textarea_attr,
+)
+from .globals import GLOBAL_ATTR
 
 
 def _get_attr(data: Any):
     if isinstance(data, dict):
         return list(cast(Mapping[str, str], data).keys())[0]
     return str(data)
+
+
+def snake_to_html(snake_str: str) -> str:
+    return snake_str.replace("_", "-").strip("-")
 
 
 def _mk_key(key: str, val: Any) -> str:
@@ -35,8 +42,6 @@ def _mk_key(key: str, val: Any) -> str:
             return f"x-transition.{'.'.join(cast(list[str], val))}"
         case "hx_on":
             return f"hx-on:{_get_attr(val)}"
-        case key if key in extrakeys:
-            return key.replace("_", "-")
         case "xml_base":
             return "xml:base"
         case "xml_lang":
@@ -44,7 +49,7 @@ def _mk_key(key: str, val: Any) -> str:
         case "xml_space":
             return "xml:space"
         case _:
-            return key
+            return snake_to_html(key)
 
 
 def _mk_val(data: Any):

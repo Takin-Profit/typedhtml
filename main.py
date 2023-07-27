@@ -16,4 +16,4 @@ print(doc(title="Hello, world!").render())
 
 print(vsd(accesskey="some key", autofocus=False).render())
 
-print(ui.shell_bar(primary_title="Hello, world!").render())
+print(ui.shell_bar(primary_title="Hello, world!", x_on={"click": "do stuff"}).render())
