@@ -72,6 +72,9 @@ class typed_tag(html_tag):
 
         super().__init__(*args, **fixed)
 
+    def render(self) -> str:
+        return super().render()
+
 
 class a(typed_tag):
     """
