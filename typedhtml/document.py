@@ -22,3 +22,6 @@ class document(doc):
 
     def add(self: Self, *args: tuple[typed_tag]) -> None:
         super().add(*args)
+
+    def render(self: Self) -> str:
+        return super().render()
