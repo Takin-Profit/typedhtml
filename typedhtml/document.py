@@ -9,8 +9,10 @@ from typedhtml.tags import typed_tag
 
 
 class document(doc):
-    def __init__(self: Self, title: str = "", doctype: str = "<!DOCTYPE html>") -> None:
-        super().__init__(title, doctype)
+    def __init__(
+        self: Self, title: str = "", doctype: str = "<!DOCTYPE html>", *a, **kw
+    ) -> None:
+        super().__init__(title, doctype, *a, **kw)
 
     def get_title(self: Self) -> str:
         return super().get_title()
