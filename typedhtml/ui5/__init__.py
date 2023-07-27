@@ -98,7 +98,13 @@ from .slider import slider, slider_props
 from .split_button import split_button, split_button_props
 from .step_input import step_input, step_input_props
 from .switch import switch, switch_props
-from .tab_container import tab_container, tab_container_props
+from .tab_container import (
+    tab,
+    tab_container,
+    tab_container_props,
+    tab_props,
+    tab_separator,
+)
 from .table import (
     table,
     table_cell,
@@ -129,6 +135,9 @@ from .view_settings_dialog import (
 from .wizard import wizard, wizard_props, wizard_step, wizard_step_props
 
 __all__ = [
+    "tab",
+    "tab_props",
+    "tab_separator",
     "wizard",
     "wizard_step",
     "wizard_step_props",

@@ -25,3 +25,31 @@ class tab_container(ui5_tag):
     def __init__(self, *args, **kwargs: Unpack[tab_container_props]):
         self.tagname = "ui5-tabcontainer"
         super().__init__(*args, **kwargs)
+
+
+class tab_props(ui5_tag_props, total=False):
+    design: Literal["Default", "Neutral", "Positive", "Critical", "Negative"]
+    disabled: bool
+    icon: str
+    selected: bool
+    text: str
+
+
+class tab(ui5_tag):
+    """The ui5-tab represents a selectable item inside a ui5-tabcontainer.
+    It defines both the item in the tab strip (top part of the control) and the
+    content that is presented to the user once the tab is selected."""
+
+    def __init__(self, *args, **kwargs: Unpack[tab_props]):
+        self.tagname = "ui5-tab"
+        super().__init__(*args, **kwargs)
+
+
+class tab_separator(ui5_tag):
+    """The ui5-tab-separator represents a vertical line to separate tabs inside a
+    ui5-tabcontainer. It can be used as a visual aid, e.g. to separate tabs with
+    different types of content."""
+
+    def __init__(self, *args, **kwargs):
+        self.tagname = "ui5-tab-separator"
+        super().__init__(*args, **kwargs)
