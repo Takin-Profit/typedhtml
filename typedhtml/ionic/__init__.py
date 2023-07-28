@@ -33,10 +33,14 @@ from .item import (
     note,
 )
 from .list_ import list_, list_header
+from .media import avatar, img, thumbnail
 from .ripple_effect import ripple_effect
 from .textarea import textarea
 
 __all__ = [
+    "avatar",
+    "img",
+    "thumbnail",
     "list_",
     "list_header",
     "item_divider",
