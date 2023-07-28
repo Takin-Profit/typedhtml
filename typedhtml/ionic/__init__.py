@@ -18,8 +18,11 @@ from .breadcrumbs import (
     breadcrumbs_props,
 )
 from .button import button, button_props
+from .ripple_effect import ripple_effect, ripple_effect_props
 
 __all__ = [
+    "ripple_effect",
+    "ripple_effect_props",
     "button",
     "button_props",
     "breadcrumb_item",
