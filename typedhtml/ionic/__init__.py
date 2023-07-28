@@ -20,6 +20,7 @@ from .date_time import (
 from .fab import fab, fab_button, fab_button_props
 from .grid import col, grid, row
 from .icon import icon
+from .indicators import loading, progress_bar, skeleton_text, spinner
 from .infinite_scroll import infinite_scroll, infinite_scroll_content
 from .input_ import input_
 from .item import (
@@ -42,6 +43,10 @@ from .ripple_effect import ripple_effect
 from .textarea import textarea
 
 __all__ = [
+    "loading",
+    "progress_bar",
+    "skeleton_text",
+    "spinner",
     "popover",
     "nav",
     "nav_link",
