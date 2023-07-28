@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "accesskey",
+        "autocorrect",
+        "bday",
         "blockquote",
         "contenteditable",
         "contextmenu",
@@ -13,6 +15,7 @@
         "groupheader",
         "htmx",
         "iframe",
+        "impp",
         "inputmode",
         "itemid",
         "itemprop",
@@ -33,6 +36,7 @@
         "ionic"
     ],
     "mypy-type-checker.args": [
-        "--enable-incomplete-feature=Unpack"
+        "--enable-incomplete-feature=Unpack",
+        "--allow-extra-keys",
     ]
 }
