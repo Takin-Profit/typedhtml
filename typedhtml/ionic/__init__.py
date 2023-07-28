@@ -19,10 +19,16 @@ from .date_time import (
 )
 from .fab import fab, fab_button, fab_button_props
 from .grid import col, grid, row
+from .icon import icon
 from .infinite_scroll import infinite_scroll, infinite_scroll_content
+from .input_ import input_
 from .ripple_effect import ripple_effect
+from .textarea import textarea
 
 __all__ = [
+    "textarea",
+    "input_",
+    "icon",
     "infinite_scroll",
     "infinite_scroll_content",
     "grid",
