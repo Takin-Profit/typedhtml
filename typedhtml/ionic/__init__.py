@@ -34,10 +34,15 @@ from .item import (
 )
 from .list_ import list_, list_header
 from .media import avatar, img, thumbnail
+from .menu import menu, menu_button, menu_toggle, split_pane
 from .ripple_effect import ripple_effect
 from .textarea import textarea
 
 __all__ = [
+    "menu",
+    "menu_button",
+    "menu_toggle",
+    "split_pane",
     "avatar",
     "img",
     "thumbnail",
