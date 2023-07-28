@@ -36,10 +36,13 @@ from .list_ import list_, list_header
 from .media import avatar, img, thumbnail
 from .menu import menu, menu_button, menu_toggle, split_pane
 from .modal import backdrop, modal
+from .nav import nav, nav_link
 from .ripple_effect import ripple_effect
 from .textarea import textarea
 
 __all__ = [
+    "nav",
+    "nav_link",
     "modal",
     "backdrop",
     "menu",
