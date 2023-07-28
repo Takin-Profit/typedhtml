@@ -27,6 +27,10 @@
         "xdata"
     ],
     "conventionalCommits.scopes": [
-        "ui5"
+        "ui5",
+        "ionic"
+    ],
+    "mypy-type-checker.args": [
+        "--enable-incomplete-feature=Unpack"
     ]
 }
