@@ -15,16 +15,16 @@ from .chip import chip
 from .content import content
 from .date_time import (
     date_time,
-    date_time_props,
     datetime_button,
-    datetime_button_props,
 )
+from .fab import fab, fab_button, fab_button_props
 from .ripple_effect import ripple_effect
 
 __all__ = [
+    "fab",
+    "fab_button",
+    "fab_button_props",
     "date_time",
-    "date_time_props",
-    "datetime_button_props",
     "datetime_button",
     "content",
     "app",
