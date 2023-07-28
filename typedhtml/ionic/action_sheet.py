@@ -25,6 +25,7 @@ class action_sheet(ion_tag):
     interaction with the app. Destructive options are made obvious in ios mode.
     There are multiple ways to dismiss the action sheet, including tapping the backdrop
     or hitting the escape key on desktop.
+
     `see https://ionicframework.com/docs/api/action-sheet` for more info.`
     """
 
