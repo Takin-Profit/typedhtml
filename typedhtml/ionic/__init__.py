@@ -19,9 +19,12 @@ from .date_time import (
 )
 from .fab import fab, fab_button, fab_button_props
 from .grid import col, grid, row
+from .infinite_scroll import infinite_scroll, infinite_scroll_content
 from .ripple_effect import ripple_effect
 
 __all__ = [
+    "infinite_scroll",
+    "infinite_scroll_content",
     "grid",
     "row",
     "col",
