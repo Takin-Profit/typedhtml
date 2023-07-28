@@ -37,10 +37,12 @@ from .media import avatar, img, thumbnail
 from .menu import menu, menu_button, menu_toggle, split_pane
 from .modal import backdrop, modal
 from .nav import nav, nav_link
+from .popover import popover
 from .ripple_effect import ripple_effect
 from .textarea import textarea
 
 __all__ = [
+    "popover",
     "nav",
     "nav_link",
     "modal",
