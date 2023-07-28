@@ -28,9 +28,15 @@ from .card import (
     card_subtitle_props,
     card_title,
 )
+from .checkbox import checkbox, checkbox_props
+from .chip import chip, chip_props
 from .ripple_effect import ripple_effect, ripple_effect_props
 
 __all__ = [
+    "chip",
+    "chip_props",
+    "checkbox",
+    "checkbox_props",
     "card",
     "card_content",
     "card_header",
