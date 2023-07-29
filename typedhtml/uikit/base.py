@@ -6,3 +6,5 @@
 from typing import Literal
 
 Transition = Literal["ease", "ease-in", "ease-out", "ease-in-out"]
+
+Style = Literal["primary", "success", "warning", "danger"]

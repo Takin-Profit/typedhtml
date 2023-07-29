@@ -3,8 +3,10 @@
 # license that can be found in the LICENSE file.
 
 from .accordion import accordion, accordion_content, accordion_item, accordion_title
+from .alert import alert
 
 __all__ = [
+    "alert",
     "accordion",
     "accordion_item",
     "accordion_title",

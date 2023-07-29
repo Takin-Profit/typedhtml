@@ -10,11 +10,11 @@ from typedhtml.tags import html, typed_tag
 def get_tags() -> list[typed_tag]:
     return [
         typed_tag(
-            id=str(i),
+            id_=str(i),
             x_bind={"placeholder": "Enter your name"},
         )
         if i % 2 == 0
-        else typed_tag(id=str(i))
+        else typed_tag(id_=str(i))
         for i in range(10)
     ]
 
@@ -23,12 +23,12 @@ def get_tags() -> list[typed_tag]:
 def get_hx_on_tags() -> list[typed_tag]:
     return [
         html(
-            id=str(i),
+            id_=str(i),
             hx_on={
                 "click": f"alert('clicked {i}')",
             },
         )
         if i % 2 == 0
-        else html(id=str(i))
+        else html(id_=str(i))
         for i in range(10)
     ]

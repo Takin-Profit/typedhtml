@@ -6,12 +6,8 @@ from typedhtml import ui5 as ui
 from typedhtml.document import document as doc
 from typedhtml.tags import p
 from typedhtml.ui5 import view_settings_dialog as vsd
-from typedhtml.uikit.accordion import (
-    accordion,
-    accordion_content,
-    accordion_item,
-    accordion_title,
-)
+from typedhtml.uikit import alert
+from typedhtml.uikit.accordion import accordion
 
 print(ui.avatar(initials="gb", color_scheme="Accent4").render())
 
@@ -29,13 +25,10 @@ print(accordion(collapsible=True, multiple=True).render())
 
 
 def data():
-    c = accordion()
-    with c:
-        with accordion_item(title="Item 1"):
-            with accordion_title("Some Title"):
-                with accordion_content("some content"):
-                    p("Hello, world!")
-    return c
+    al = alert(animation=True, duration=0, style="danger")
+    with al:
+        p("Hello, world!")
+    return al
 
 
 print(data().render())
