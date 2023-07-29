@@ -4,8 +4,11 @@
 
 from .accordion import accordion, accordion_content, accordion_item, accordion_title
 from .alert import alert
+from .article import article, article_title
 
 __all__ = [
+    "article_title",
+    "article",
     "alert",
     "accordion",
     "accordion_item",

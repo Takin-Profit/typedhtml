@@ -8,6 +8,7 @@ from typedhtml.tags import p
 from typedhtml.ui5 import view_settings_dialog as vsd
 from typedhtml.uikit import alert
 from typedhtml.uikit.accordion import accordion
+from typedhtml.uikit.article import article_meta, article_title
 
 print(ui.avatar(initials="gb", color_scheme="Accent4").render())
 
@@ -32,3 +33,4 @@ def data():
 
 
 print(data().render())
+print(article_meta().render())
