@@ -13,12 +13,12 @@ class GLOBAL_ATTR(TypedDict, total=False):
     autocapitalize: Literal["off", "none", "", "sentences", "words", "characters"]
     contenteditable: Union[bool, Literal["plaintext-only"]]
     contextmenu: str
-    dir: Literal["ltr", "rtl", "auto"]
+    dir_: Literal["ltr", "rtl", "auto"]
     draggable: bool
     enterkeyhint: Literal["enter", "done", "go", "next", "previous", "search", "send"]
     exportparts: str
     hidden: Union[Literal["", "until-found"], str]
-    id: str
+    id_: str
     autofocus: bool
     exportparts: str
     inert: bool

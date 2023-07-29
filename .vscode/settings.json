@@ -4,6 +4,7 @@
         "autocorrect",
         "bday",
         "blockquote",
+        "bulma",
         "contenteditable",
         "contextmenu",
         "daterange",
@@ -33,7 +34,8 @@
     ],
     "conventionalCommits.scopes": [
         "ui5",
-        "ionic"
+        "ionic",
+        "uikit"
     ],
     "mypy-type-checker.args": [
         "--enable-incomplete-feature=Unpack",
