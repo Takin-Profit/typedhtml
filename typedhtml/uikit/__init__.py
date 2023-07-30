@@ -64,8 +64,10 @@ background_blend_saturation = "uk-background-blend-saturation"
 background_blend_color = "uk-background-blend-color"
 background_blend_luminosity = "uk-background-blend-luminosity"
 
+from .badge import badge
 
 __all__ = [
+    "badge",
     "background_blend_multiply",
     "background_blend_screen",
     "background_blend_overlay",
