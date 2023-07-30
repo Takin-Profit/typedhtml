@@ -12,10 +12,10 @@ from typedhtml.uikit.util import add_val
 
 
 def accordion(
+    *args: Any,
     collapsible: bool = True,
     multiple: bool = False,
     transition: Optional[Transition] = None,
-    *args: Any,
     **kwargs: Unpack[GLOBAL_ATTR],
 ) -> ul:
     """Create a list of items that can be shown individually by clicking an item's
@@ -37,8 +37,8 @@ def accordion(
 
 
 def accordion_item(
-    is_open: bool = False,
     *args: Any,
+    is_open: bool = False,
     **kwargs: Unpack[li_attr],
 ) -> li:
     """Create an item for an accordion.
@@ -52,7 +52,10 @@ def accordion_item(
 
 
 def accordion_title(
-    title: str = "", href: str = "#", *args: Any, **kwargs: Unpack[li_attr]
+    *args: Any,
+    title: str = "",
+    href: str = "#",
+    **kwargs: Unpack[li_attr],
 ) -> a:
     """Create a title for an accordion item.
 

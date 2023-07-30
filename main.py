@@ -5,3 +5,4 @@
 from typedhtml.uikit import badge
 
 print(badge("sietnreisn").render())
+print(None)

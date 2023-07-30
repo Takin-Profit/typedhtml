@@ -12,10 +12,10 @@ from typedhtml.uikit.util import add_val
 
 
 def alert(
+    *args: Any,
     animation: bool = False,
     duration: int = 0,
     style: Style = "primary",
-    *args: Any,
     **kwargs: Unpack[GLOBAL_ATTR],
 ) -> div:
     """Display success, warning and error messages.
