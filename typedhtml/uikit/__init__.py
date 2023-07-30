@@ -23,8 +23,69 @@ from .cover import cover
 from .description_list import description_list
 from .divider import divider
 from .dotnav import dotnav
+from .drop import drop, drop_bar, dropdown
+from .flex import flex
 
 __all__ = [
+    "flex",
+    "flex_none",
+    "flex_auto",
+    "flex_1",
+    "flex_first",
+    "flex_last",
+    "flex_first_s",
+    "flex_last_s",
+    "flex_first_m",
+    "flex_last_m",
+    "flex_first_l",
+    "flex_last_l",
+    "flex_first_xl",
+    "flex_last_xl",
+    "flex_wrap_stretch",
+    "flex_wrap_between",
+    "flex_wrap_around",
+    "flex_wrap_top",
+    "flex_wrap_middle",
+    "flex_wrap_bottom",
+    "flex_wrap",
+    "flex_wrap_reverse",
+    "flex_nowrap",
+    "flex_row",
+    "flex_row_reverse",
+    "flex_column",
+    "flex_column_reverse",
+    "flex_middle",
+    "flex_bottom",
+    "flex_top",
+    "flex_stretch",
+    "flex_left_s",
+    "flex_center_s",
+    "flex_right_s",
+    "flex_between_s",
+    "flex_around_s",
+    "flex_left_m",
+    "flex_center_m",
+    "flex_right_m",
+    "flex_between_m",
+    "flex_around_m",
+    "flex_left_l",
+    "flex_center_l",
+    "flex_right_l",
+    "flex_between_l",
+    "flex_around_l",
+    "flex_left_xl",
+    "flex_center_xl",
+    "flex_right_xl",
+    "flex_between_xl",
+    "flex_around_xl",
+    "flex_align_around",
+    "flex_align_between",
+    "flex_align_center",
+    "flex_align_right",
+    "flex_align_left",
+    "drop",
+    "drop_bar",
+    "dropdown",
     "dotnav",
     "divider",
     "description_list",
@@ -306,3 +367,69 @@ position_relative = "uk-position-relative"
 position_absolute = "uk-position-absolute"
 position_fixed = "uk-position-fixed"
 position_z_index = "uk-position-z-index"
+
+flex_align_left = "uk-flex-left"
+flex_align_center = "uk-flex-center"
+flex_align_right = "uk-flex-right"
+flex_align_between = "uk-flex-between"
+flex_align_around = "uk-flex-around"
+
+flex_left_s = "uk-flex-left@s"
+flex_center_s = "uk-flex-center@s"
+flex_right_s = "uk-flex-right@s"
+flex_between_s = "uk-flex-between@s"
+flex_around_s = "uk-flex-around@s"
+
+flex_left_m = "uk-flex-left@m"
+flex_center_m = "uk-flex-center@m"
+flex_right_m = "uk-flex-right@m"
+flex_between_m = "uk-flex-between@m"
+flex_around_m = "uk-flex-around@m"
+
+flex_left_l = "uk-flex-left@l"
+flex_center_l = "uk-flex-center@l"
+flex_right_l = "uk-flex-right@l"
+flex_between_l = "uk-flex-between@l"
+flex_around_l = "uk-flex-around@l"
+
+flex_left_xl = "uk-flex-left@xl"
+flex_center_xl = "uk-flex-center@xl"
+flex_right_xl = "uk-flex-right@xl"
+flex_between_xl = "uk-flex-between@xl"
+flex_around_xl = "uk-flex-around@xl"
+
+flex_middle = "uk-flex-middle"
+flex_bottom = "uk-flex-bottom"
+flex_top = "uk-flex-top"
+flex_stretch = "uk-flex-stretch"
+
+flex_row = "uk-flex-row"
+flex_row_reverse = "uk-flex-row-reverse"
+flex_column = "uk-flex-column"
+flex_column_reverse = "uk-flex-column-reverse"
+
+flex_wrap = "uk-flex-wrap"
+flex_wrap_reverse = "uk-flex-wrap-reverse"
+flex_nowrap = "uk-flex-nowrap"
+
+flex_wrap_stretch = "uk-flex-wrap-stretch"
+flex_wrap_between = "uk-flex-wrap-between"
+flex_wrap_around = "uk-flex-wrap-around"
+flex_wrap_top = "uk-flex-wrap-top"
+flex_wrap_middle = "uk-flex-wrap-middle"
+flex_wrap_bottom = "uk-flex-wrap-bottom"
+
+flex_first = "uk-flex-first"
+flex_last = "uk-flex-last"
+flex_first_s = "uk-flex-first@s"
+flex_last_s = "uk-flex-last@s"
+flex_first_m = "uk-flex-first@m"
+flex_last_m = "uk-flex-last@m"
+flex_first_l = "uk-flex-first@l"
+flex_last_l = "uk-flex-last@l"
+flex_first_xl = "uk-flex-first@xl"
+flex_last_xl = "uk-flex-last@xl"
+
+flex_none = "uk-flex-none"
+flex_auto = "uk-flex-auto"
+flex_1 = "uk-flex-1"

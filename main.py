@@ -2,9 +2,15 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from typedhtml.uikit import badge, button, container
+from typedhtml.uikit import flex
 
-print(badge("sietnreisn").render())
-print(button("sietnreisn", size="large").render())
-
-print(container("sietnreisn", size="uk-container-xlarge").render())
+print(
+    flex(
+        classes=[
+            "uk-flex-center",
+            "uk-flex-around@m",
+            "uk-flex-between@m",
+        ],
+        id_="flex",
+    )
+)
