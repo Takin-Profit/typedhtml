@@ -17,8 +17,15 @@ from .comment import (
     comment_meta,
     comment_title,
 )
+from .container import container
 
 __all__ = [
+    "container",
+    "container_expand",
+    "container_small",
+    "container_xsmall",
+    "container_xlarge",
+    "container_large",
     "comment",
     "comment_header",
     "comment_avatar",
@@ -236,3 +243,9 @@ column_1_3_xl = "uk-column-1-3@xl"
 column_1_4_xl = "uk-column-1-4@xl"
 column_1_5_xl = "uk-column-1-5@xl"
 column_1_6_xl = "uk-column-1-6@xl"
+
+container_expand = "uk-container-expand"
+container_small = "uk-container-small"
+container_xsmall = "uk-container-xsmall"
+container_xlarge = "uk-container-xlarge"
+container_large = "uk-container-large"
