@@ -9,8 +9,22 @@ from .article import article, article_title
 from .badge import badge
 from .button import button, button_group
 from .card import card, card_title
+from .comment import (
+    comment,
+    comment_avatar,
+    comment_body,
+    comment_header,
+    comment_meta,
+    comment_title,
+)
 
 __all__ = [
+    "comment",
+    "comment_header",
+    "comment_avatar",
+    "comment_title",
+    "comment_meta",
+    "comment_body",
     "column_1_2_s",
     "column_1_3_s",
     "column_1_4_s",
