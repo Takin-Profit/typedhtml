@@ -18,8 +18,41 @@ from .comment import (
     comment_title,
 )
 from .container import container
+from .countdown import countdown
+from .cover import cover
+from .description_list import description_list
+from .divider import divider
+from .dotnav import dotnav
 
 __all__ = [
+    "dotnav",
+    "divider",
+    "description_list",
+    "countdown",
+    "cover",
+    "position_top",
+    "position_left",
+    "position_right",
+    "position_bottom",
+    "position_top_left",
+    "position_top_center",
+    "position_top_right",
+    "position_center",
+    "position_center_left",
+    "position_center_right",
+    "position_bottom_left",
+    "position_bottom_center",
+    "position_bottom_right",
+    "position_cover",
+    "position_center_left_out",
+    "position_center_right_out",
+    "position_small",
+    "position_medium",
+    "position_large",
+    "position_relative",
+    "position_absolute",
+    "position_fixed",
+    "position_z_index",
     "container",
     "container_expand",
     "container_small",
@@ -249,3 +282,27 @@ container_small = "uk-container-small"
 container_xsmall = "uk-container-xsmall"
 container_xlarge = "uk-container-xlarge"
 container_large = "uk-container-large"
+
+position_top = "uk-position-top"
+position_left = "uk-position-left"
+position_right = "uk-position-right"
+position_bottom = "uk-position-bottom"
+position_top_left = "uk-position-top-left"
+position_top_center = "uk-position-top-center"
+position_top_right = "uk-position-top-right"
+position_center = "uk-position-center"
+position_center_left = "uk-position-center-left"
+position_center_right = "uk-position-center-right"
+position_bottom_left = "uk-position-bottom-left"
+position_bottom_center = "uk-position-bottom-center"
+position_bottom_right = "uk-position-bottom-right"
+position_cover = "uk-position-cover"
+position_center_left_out = "uk-position-center-left-out"
+position_center_right_out = "uk-position-center-right-out"
+position_small = "uk-position-small"
+position_medium = "uk-position-medium"
+position_large = "uk-position-large"
+position_relative = "uk-position-relative"
+position_absolute = "uk-position-absolute"
+position_fixed = "uk-position-fixed"
+position_z_index = "uk-position-z-index"

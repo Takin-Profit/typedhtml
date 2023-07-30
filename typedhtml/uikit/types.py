@@ -27,6 +27,29 @@ Container = Literal[
     "uk-container-expand",
 ]
 
+Position = Literal[
+    "uk-position-top",
+    "uk-position-bottom",
+    "uk-position-left ",
+    "uk-position-right",
+    "uk-position-top-left",
+    "uk-position-top-center",
+    "uk-position-top-right",
+    "uk-position-center",
+    "uk-position-center-left",
+    "uk-position-center-right",
+    "uk-position-bottom-left",
+    "uk-position-bottom-center",
+    "uk-position-bottom-right",
+    "uk-position-cover",
+    "uk-position-center-left-out",
+    "uk-position-center-right-out",
+    "uk-position-relative",
+    "uk-position-absolute",
+    "uk-position-fixed",
+    "uk-position-z-index",
+]
+
 Heading = Literal["h1", "h2", "h3", "h4", "h5", "h6"]
 Transition = Literal["ease", "ease-in", "ease-out", "ease-in-out"]
 
