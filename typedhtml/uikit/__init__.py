@@ -8,8 +8,36 @@ from .alert import alert
 from .article import article, article_title
 from .badge import badge
 from .button import button, button_group
+from .card import card, card_title
 
 __all__ = [
+    "column_1_2_s",
+    "column_1_3_s",
+    "column_1_4_s",
+    "column_1_5_s",
+    "column_1_6_s",
+    "column_1_2_m",
+    "column_1_3_m",
+    "column_1_4_m",
+    "column_1_5_m",
+    "column_1_6_m",
+    "column_1_2_l",
+    "column_1_3_l",
+    "column_1_4_l",
+    "column_1_5_l",
+    "column_1_6_l",
+    "column_1_2_xl",
+    "column_1_3_xl",
+    "column_1_4_xl",
+    "column_1_5_xl",
+    "column_1_6_xl",
+    "column_1_2",
+    "column_1_3",
+    "column_1_4",
+    "column_1_5",
+    "column_1_6",
+    "card",
+    "card_title",
     "button",
     "button_group",
     "width_1_1",
@@ -160,3 +188,37 @@ width_2_5 = "uk-width-2-5"
 width_3_5 = "uk-width-3-5"
 width_4_5 = "uk-width-4-5"
 width_5_6 = "uk-width-5-6"
+
+column_1_2 = "uk-column-1-2"
+column_1_3 = "uk-column-1-3"
+column_1_4 = "uk-column-1-4"
+column_1_5 = "uk-column-1-5"
+column_1_6 = "uk-column-1-6"
+
+# Responsive classes for 640px and higher
+column_1_2_s = "uk-column-1-2@s"
+column_1_3_s = "uk-column-1-3@s"
+column_1_4_s = "uk-column-1-4@s"
+column_1_5_s = "uk-column-1-5@s"
+column_1_6_s = "uk-column-1-6@s"
+
+# Responsive classes for 960px and higher
+column_1_2_m = "uk-column-1-2@m"
+column_1_3_m = "uk-column-1-3@m"
+column_1_4_m = "uk-column-1-4@m"
+column_1_5_m = "uk-column-1-5@m"
+column_1_6_m = "uk-column-1-6@m"
+
+# Responsive classes for 1200px and higher
+column_1_2_l = "uk-column-1-2@l"
+column_1_3_l = "uk-column-1-3@l"
+column_1_4_l = "uk-column-1-4@l"
+column_1_5_l = "uk-column-1-5@l"
+column_1_6_l = "uk-column-1-6@l"
+
+# Responsive classes for 1600px and higher
+column_1_2_xl = "uk-column-1-2@xl"
+column_1_3_xl = "uk-column-1-3@xl"
+column_1_4_xl = "uk-column-1-4@xl"
+column_1_5_xl = "uk-column-1-5@xl"
+column_1_6_xl = "uk-column-1-6@xl"

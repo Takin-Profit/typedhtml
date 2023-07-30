@@ -7,7 +7,7 @@ from typing import Any, Optional, Unpack, cast
 from typedhtml.attributes import li_attr
 from typedhtml.globals import GLOBAL_ATTR
 from typedhtml.tags import a, div, li, ul
-from typedhtml.uikit.base import Transition
+from typedhtml.uikit.types import Transition
 from typedhtml.uikit.util import add_val
 
 

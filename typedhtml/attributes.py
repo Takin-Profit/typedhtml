@@ -79,7 +79,7 @@ class a_attr(GLOBAL_ATTR, total=False):
     """Specifies the relationship of the target object to the link object."""
     target: Literal["_blank", "_self", "_parent", "_top"]
     """Specifies where to display the linked URL."""
-    type: str
+    type_: str
     """Specifies the media type in the form of a MIME type for the linked URL."""
 
 
@@ -162,7 +162,7 @@ class link_attr(GLOBAL_ATTR, total=False):
     rel: str
     sizes: str
     title: str
-    type: str
+    type_: str
     blocking: bool
 
 
@@ -263,8 +263,8 @@ class ol_attr(GLOBAL_ATTR, total=False):
     """Indicates whether the list should be displayed in a
     descending order instead of a ascending."""
 
-    type: Literal["1", "a", "A", "i", "I"]
-    """Sets the numbering type:
+    type_: Literal["1", "a", "A", "i", "I"]
+    """Sets the numbering type_:
 
     a for lowercase letters
     A for uppercase letters
@@ -408,7 +408,7 @@ class iframe_attr(GLOBAL_ATTR, total=False):
 class embed_attr(GLOBAL_ATTR, total=False):
     height: str
     src: str
-    type: str
+    type_: str
     width: str
 
 
@@ -417,7 +417,7 @@ class object_attr(GLOBAL_ATTR, total=False):
     form: str
     height: str
     name: str
-    type: str
+    type_: str
     usemap: str
     width: str
 
@@ -456,7 +456,7 @@ class source_attr(GLOBAL_ATTR, total=False):
     sizes: str
     src: str
     srcset: str
-    type: str
+    type_: str
     height: str
     width: str
 
@@ -504,7 +504,7 @@ class form_attr(GLOBAL_ATTR, total=False):
     accept_charset: str
     action: str
     autocomplete: Literal["on", "off"]
-    enctype: Literal[
+    enctype_: Literal[
         "application/x-www-form-urlencoded", "multipart/form-data", "text/plain"
     ]
     rel: str
@@ -530,7 +530,7 @@ class input_attr(GLOBAL_ATTR, total=False):
     disabled: bool
     form: str
     formaction: str
-    formenctype: Literal[
+    formenctype_: Literal[
         "application/x-www-form-urlencoded", "multipart/form-data", "text/plain"
     ]
     formmethod: Literal["get", "post", "dialog"]
@@ -551,7 +551,7 @@ class input_attr(GLOBAL_ATTR, total=False):
     size: int
     src: str
     step: str
-    type: Literal[
+    type_: Literal[
         "button",
         "checkbox",
         "color",
@@ -588,14 +588,14 @@ class button_attr(GLOBAL_ATTR, total=False):
     disabled: bool
     form: str
     formaction: str
-    formenctype: Literal[
+    formenctype_: Literal[
         "application/x-www-form-urlencoded", "multipart/form-data", "text/plain"
     ]
     formmethod: Literal["get", "post", "dialog"]
     formnovalidate: bool
     formtarget: Literal["_blank", "_self", "_parent", "_top"]
     name: str
-    type: Literal["button", "reset", "submit"]
+    type_: Literal["button", "reset", "submit"]
     value: str
     popovertarget: str
     popovertargetaction: Literal["hide", "show", "toggle"]
@@ -689,7 +689,7 @@ class script_attr(GLOBAL_ATTR, total=False):
         "strict-origin-when-cross-origin",
     ]
     src: str
-    type: Literal[
+    type_: Literal[
         "module",
         "text/javascript",
         "text/ecmascript",

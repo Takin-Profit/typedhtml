@@ -7,7 +7,7 @@ from typing import Any, Unpack
 
 from typedhtml.globals import GLOBAL_ATTR
 from typedhtml.tags import a, div
-from typedhtml.uikit.base import Style
+from typedhtml.uikit.types import Style
 from typedhtml.uikit.util import add_val
 
 

@@ -18,3 +18,8 @@ Width = Literal[
     "uk-width-4-5",
     "uk-width-5-6",
 ]
+
+Heading = Literal["h1", "h2", "h3", "h4", "h5", "h6"]
+Transition = Literal["ease", "ease-in", "ease-out", "ease-in-out"]
+
+Style = Literal["primary", "success", "warning", "danger"]

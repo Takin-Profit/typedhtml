@@ -5,8 +5,9 @@ from typing import Any, Unpack
 
 from typedhtml.globals import GLOBAL_ATTR
 from typedhtml.tags import article as art
-from typedhtml.tags import h1, p
-from typedhtml.uikit.util import add_val
+from typedhtml.tags import p, typed_tag
+from typedhtml.uikit.types import Heading
+from typedhtml.uikit.util import add_val, heading
 
 
 def article(*args: Any, **kwargs: Unpack[GLOBAL_ATTR]) -> art:
@@ -20,7 +21,11 @@ def article(*args: Any, **kwargs: Unpack[GLOBAL_ATTR]) -> art:
     return art(*args, **kwargs)
 
 
-def article_title(*args: Any, **kwargs: Unpack[GLOBAL_ATTR]) -> h1:
+def article_title(
+    *args: Any,
+    header_size: Heading = "h1",
+    **kwargs: Unpack[GLOBAL_ATTR],
+) -> typed_tag:
     """Article is a semantic element that defines an independent, self-contained
     content.
 
@@ -28,7 +33,7 @@ def article_title(*args: Any, **kwargs: Unpack[GLOBAL_ATTR]) -> h1:
     """
 
     add_val("cls", "uk-article-title", kwargs)  # type: ignore
-    return h1(*args, **kwargs)
+    return heading(header_size, *args, **kwargs)
 
 
 def article_meta(*args: Any, **kwargs: Unpack[GLOBAL_ATTR]) -> p:

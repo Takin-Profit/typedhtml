@@ -3,6 +3,7 @@
 # license that can be found in the LICENSE file.
 from typing import Any, Literal, Optional, Unpack
 
+from typedhtml.attributes import button_attr
 from typedhtml.globals import GLOBAL_ATTR
 from typedhtml.tags import button as btn
 from typedhtml.tags import div
@@ -13,26 +14,35 @@ from .util import add_val
 Style = Literal["default", "primary", "secondary", "danger", "text", "link"]
 
 
-def size(size: Literal["default", "small", "large"]):
+def _size(size: Literal["default", "small", "large"]):
     return "" if size == "default" else f"uk-button-{size}"
 
 
-def width(width: Optional[Width]):
+def _width(width: Optional[Width]):
     return "" if width is None else width
 
 
 def button(
-    *args,
+    *args: Any,
     style: Style = "default",
-    size: Literal["default", "small", "large"],
+    size: Literal["default", "small", "large"] = "default",
     width: Optional[Width] = None,
-    **kwargs,
+    **kwargs: Unpack[button_attr],
 ):
     """Button is a control that is used to trigger an action.
 
     see: `https://getuikit.com/docs/button`
     """
-    add_val("cls", f"uk-button uk-button-{style} {size(size)} {width(width)}", kwargs)  # type: ignore
+    add_val("cls", f"uk-button uk-button-{style} {_size(size)} {_width(width)}".strip(" "), kwargs)  # type: ignore
+    return btn(*args, **kwargs)
+
+
+def close_button(*args: Any, **kwargs: Unpack[button_attr]) -> btn:
+    """Create a close icon that can be combined with different components.
+    see: `https://getuikit.com/docs/close`
+    """
+    add_val("cls", "uk-close", kwargs)  # type: ignore
+    add_val("type_", "button", kwargs)  # type: ignore
     return btn(*args, **kwargs)
 
 
