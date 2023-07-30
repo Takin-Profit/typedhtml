@@ -7,6 +7,7 @@ from typing import Any, Optional, Unpack
 from typedhtml.globals import GLOBAL_ATTR
 from typedhtml.tags import div
 from typedhtml.uikit.types import Container
+from typedhtml.uikit.util import add_val
 
 
 def container(
@@ -17,7 +18,6 @@ def container(
     see: `https://getuikit.com/docs/container`_
     """
 
-    if size:
-        kwargs["cls"] = f"uk-container {size or ''}"  # type: ignore
+    add_val("cls", f"uk-container {size or ''}", kwargs)  # type: ignore
 
     return div(*args, **kwargs)
