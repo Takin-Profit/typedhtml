@@ -34,7 +34,8 @@
         "typedhtml",
         "typehtml",
         "virtualkeyboardpolicy",
-        "xdata"
+        "xdata",
+        "xsmall"
     ],
     "conventionalCommits.scopes": [
         "ui5",

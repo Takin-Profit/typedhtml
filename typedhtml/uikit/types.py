@@ -114,3 +114,6 @@ FlexClass = Literal[
     "uk-flex-auto",
     "uk-flex-1",
 ]
+
+
+FormState = Literal["uk-form-danger", "uk-form-success"]
