@@ -29,8 +29,10 @@ from .form import checkbox, fieldset, input_, legend, radio, range_, select, tex
 from .height import height
 from .icon import icon, icon_nav
 from .image import image
+from .label import label
 
 __all__ = [
+    "label",
     "image",
     "icon_nav",
     "icon",
