@@ -28,8 +28,10 @@ from .flex import flex
 from .form import checkbox, fieldset, input_, legend, radio, range_, select, textarea
 from .height import height
 from .icon import icon, icon_nav
+from .image import image
 
 __all__ = [
+    "image",
     "icon_nav",
     "icon",
     "height",
