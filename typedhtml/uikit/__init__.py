@@ -32,8 +32,83 @@ from .image import image
 from .label import label
 from .lightbox import lightbox, lightbox_content
 from .link import link
+from .list_ import list_
 
 __all__ = [
+    "margin_auto_left_s",
+    "margin_auto_s",
+    "margin_auto_right_s",
+    "margin_auto_left_m",
+    "margin_auto_m",
+    "margin_auto_right_m",
+    "margin_auto_left_l",
+    "margin_auto_l",
+    "margin_auto_right_l",
+    "margin_auto_left_xl",
+    "margin_auto_xl",
+    "margin_auto_right_xl",
+    "margin_auto",
+    "margin_auto_top",
+    "margin_auto_bottom",
+    "margin_auto_left",
+    "margin_auto_right",
+    "margin_auto_vertical",
+    "margin_remove_left_s",
+    "margin_remove_right_s",
+    "margin_remove_left_m",
+    "margin_remove_right_m",
+    "margin_remove_left_l",
+    "margin_remove_right_l",
+    "margin_remove_left_xl",
+    "margin_remove_right_xl",
+    "margin_remove",
+    "margin_remove_top",
+    "margin_remove_bottom",
+    "margin_remove_left",
+    "margin_remove_right",
+    "margin_remove_vertical",
+    "margin_remove_adjacent",
+    "margin_remove_first_child",
+    "margin_remove_last_child",
+    "margin_xlarge",
+    "margin_xlarge_top",
+    "margin_xlarge_bottom",
+    "margin_xlarge_left",
+    "margin_xlarge_right",
+    "margin_large",
+    "margin_large_top",
+    "margin_large_bottom",
+    "margin_large_left",
+    "margin_large_right",
+    "margin_medium",
+    "margin_medium_top",
+    "margin_medium_bottom",
+    "margin_medium_left",
+    "margin_medium_right",
+    "margin_small",
+    "margin_small_top",
+    "margin_small_bottom",
+    "margin_small_left",
+    "margin_small_right",
+    "margin",
+    "margin_top",
+    "margin_bottom",
+    "margin_left",
+    "margin_right",
+    "list_",
+    "list_large",
+    "list_collapse",
+    "list_bullet",
+    "list_divider",
+    "list_muted",
+    "list_emphasis",
+    "list_primary",
+    "list_secondary",
+    "list_disc",
+    "list_circle",
+    "list_square",
+    "list_decimal",
+    "list_hyphen",
     "link",
     "link_muted",
     "link_text",
@@ -508,3 +583,85 @@ link_text = "uk-link-text"
 link_heading = "uk-link-heading"
 link_reset = "uk-link-reset"
 link_toggle = "uk-link-toggle"
+
+list_disc = "uk-list-disc"
+list_circle = "uk-list-circle"
+list_square = "uk-list-square"
+list_decimal = "uk-list-decimal"
+list_hyphen = "uk-list-hyphen"
+
+list_muted = "uk-list-muted"
+list_emphasis = "uk-list-emphasis"
+list_primary = "uk-list-primary"
+list_secondary = "uk-list-secondary"
+list_bullet = "uk-list-bullet"
+list_divider = "uk-list-divider"
+list_striped = "uk-list-striped"
+list_large = "uk-list-large"
+list_collapse = "uk-list-collapse"
+
+margin = "uk-margin"
+margin_top = "uk-margin-top"
+margin_bottom = "uk-margin-bottom"
+margin_left = "uk-margin-left"
+margin_right = "uk-margin-right"
+margin_small = "uk-margin-small"
+margin_small_top = "uk-margin-small-top"
+margin_small_bottom = "uk-margin-small-bottom"
+margin_small_left = "uk-margin-small-left"
+margin_small_right = "uk-margin-small-right"
+margin_medium = "uk-margin-medium"
+margin_medium_top = "uk-margin-medium-top"
+margin_medium_bottom = "uk-margin-medium-bottom"
+margin_medium_left = "uk-margin-medium-left"
+margin_medium_right = "uk-margin-medium-right"
+margin_large = "uk-margin-large"
+margin_large_top = "uk-margin-large-top"
+margin_large_bottom = "uk-margin-large-bottom"
+margin_large_left = "uk-margin-large-left"
+margin_large_right = "uk-margin-large-right"
+
+margin_xlarge = "uk-margin-xlarge"
+margin_xlarge_top = "uk-margin-xlarge-top"
+margin_xlarge_bottom = "uk-margin-xlarge-bottom"
+margin_xlarge_left = "uk-margin-xlarge-left"
+margin_xlarge_right = "uk-margin-xlarge-right"
+
+margin_remove = "uk-margin-remove"
+margin_remove_top = "uk-margin-remove-top"
+margin_remove_bottom = "uk-margin-remove-bottom"
+margin_remove_left = "uk-margin-remove-left"
+margin_remove_right = "uk-margin-remove-right"
+margin_remove_vertical = "uk-margin-remove-vertical"
+margin_remove_adjacent = "uk-margin-remove-adjacent"
+margin_remove_first_child = "uk-margin-remove-first-child"
+margin_remove_last_child = "uk-margin-remove-last-child"
+margin_remove_left_s = "uk-margin-remove-left@s"
+margin_remove_right_s = "uk-margin-remove-right@s"
+margin_remove_left_m = "uk-margin-remove-left@m"
+margin_remove_right_m = "uk-margin-remove-right@m"
+margin_remove_left_l = "uk-margin-remove-left@l"
+margin_remove_right_l = "uk-margin-remove-right@l"
+margin_remove_left_xl = "uk-margin-remove-left@xl"
+margin_remove_right_xl = "uk-margin-remove-right@xl"
+margin_auto = "uk-margin-auto"
+margin_auto_top = "uk-margin-auto-top"
+margin_auto_bottom = "uk-margin-auto-bottom"
+margin_auto_left = "uk-margin-auto-left"
+margin_auto_right = "uk-margin-auto-right"
+margin_auto_vertical = "uk-margin-auto-vertical"
+margin_auto_left_s = "uk-margin-auto-left@s"
+margin_auto_s = "uk-margin-auto@s"
+margin_auto_right_s = "uk-margin-auto-right@s"
+
+margin_auto_left_m = "uk-margin-auto-left@m"
+margin_auto_m = "uk-margin-auto@m"
+margin_auto_right_m = "uk-margin-auto-right@m"
+
+margin_auto_left_l = "uk-margin-auto-left@l"
+margin_auto_l = "uk-margin-auto@l"
+margin_auto_right_l = "uk-margin-auto-right@l"
+
+margin_auto_left_xl = "uk-margin-auto-left@xl"
+margin_auto_xl = "uk-margin-auto@xl"
+margin_auto_right_xl = "uk-margin-auto-right@xl"
