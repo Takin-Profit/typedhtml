@@ -26,8 +26,13 @@ from .dotnav import dotnav
 from .drop import drop, drop_bar, dropdown
 from .flex import flex
 from .form import checkbox, fieldset, input_, legend, radio, range_, select, textarea
+from .height import height
+from .icon import icon, icon_nav
 
 __all__ = [
+    "icon_nav",
+    "icon",
+    "height",
     "height_1_1",
     "height_small",
     "height_max_small",
