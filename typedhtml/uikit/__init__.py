@@ -28,6 +28,13 @@ from .flex import flex
 from .form import checkbox, fieldset, input_, legend, radio, range_, select, textarea
 
 __all__ = [
+    "height_1_1",
+    "height_small",
+    "height_max_small",
+    "height_medium",
+    "height_max_medium",
+    "height_large",
+    "height_max_large",
     "grid_column_small",
     "grid_row_small",
     "grid_column_medium",
@@ -468,3 +475,11 @@ grid_column_large = "uk-grid-column-large"
 grid_row_large = "uk-grid-row-large"
 grid_column_collapse = "uk-grid-column-collapse"
 grid_row_collapse = "uk-grid-row-collapse"
+
+height_1_1 = "uk-height-1-1"
+height_small = "uk-height-small"
+height_max_small = "uk-height-max-small"
+height_medium = "uk-height-medium"
+height_max_medium = "uk-height-max-medium"
+height_large = "uk-height-large"
+height_max_large = "uk-height-max-large"

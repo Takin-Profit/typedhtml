@@ -35,6 +35,7 @@
         "typehtml",
         "virtualkeyboardpolicy",
         "xdata",
+        "xlarge",
         "xsmall"
     ],
     "conventionalCommits.scopes": [
