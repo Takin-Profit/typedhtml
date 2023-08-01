@@ -33,8 +33,10 @@ from .label import label
 from .lightbox import lightbox, lightbox_content
 from .link import link
 from .list_ import list_
+from .marker import marker
 
 __all__ = [
+    "marker",
     "margin_auto_left_s",
     "margin_auto_s",
     "margin_auto_right_s",
