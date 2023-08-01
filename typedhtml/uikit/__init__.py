@@ -30,8 +30,18 @@ from .height import height
 from .icon import icon, icon_nav
 from .image import image
 from .label import label
+from .lightbox import lightbox, lightbox_content
+from .link import link
 
 __all__ = [
+    "link",
+    "link_muted",
+    "link_text",
+    "link_heading",
+    "link_reset",
+    "link_toggle",
+    "lightbox_content",
+    "lightbox",
     "label",
     "image",
     "icon_nav",
@@ -492,3 +502,9 @@ height_medium = "uk-height-medium"
 height_max_medium = "uk-height-max-medium"
 height_large = "uk-height-large"
 height_max_large = "uk-height-max-large"
+
+link_muted = "uk-link-muted"
+link_text = "uk-link-text"
+link_heading = "uk-link-heading"
+link_reset = "uk-link-reset"
+link_toggle = "uk-link-toggle"
