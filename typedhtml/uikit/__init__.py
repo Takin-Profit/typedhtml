@@ -34,8 +34,26 @@ from .lightbox import lightbox, lightbox_content
 from .link import link
 from .list_ import list_
 from .marker import marker
+from .modal import (
+    modal,
+    modal_button,
+    modal_close,
+    modal_dialog,
+    modal_footer,
+    modal_header,
+    modal_link,
+    modal_title,
+)
 
 __all__ = [
+    "modal",
+    "modal_button",
+    "modal_link",
+    "modal_dialog",
+    "modal_title",
+    "modal_close",
+    "modal_footer",
+    "modal_header",
     "marker",
     "margin_auto_left_s",
     "margin_auto_s",
