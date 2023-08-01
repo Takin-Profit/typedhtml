@@ -117,3 +117,18 @@ FlexClass = Literal[
 
 
 FormState = Literal["uk-form-danger", "uk-form-success"]
+
+GridGap = Literal[
+    "uk-grid-small",
+    "uk-grid-medium",
+    "uk-grid-large",
+    "uk-grid-collapse",
+    "grid_column_small",
+    "grid_row_small",
+    "grid_column_medium",
+    "grid_row_medium",
+    "grid_column_large",
+    "grid_row_large",
+    "grid_column_collapse",
+    "grid_row_collapse",
+]
