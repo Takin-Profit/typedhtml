@@ -24,16 +24,16 @@ def _width(width: Optional[Width]):
 
 def button(
     *args: Any,
-    style: Style = "default",
+    style_: Style = "default",
     size: Literal["default", "small", "large"] = "default",
     width: Optional[Width] = None,
     **kwargs: Unpack[button_attr],
-):
+) -> btn:
     """Button is a control that is used to trigger an action.
 
     see: `https://getuikit.com/docs/button`
     """
-    add_val("cls", f"uk-button uk-button-{style} {_size(size)} {_width(width)}".strip(" "), kwargs)  # type: ignore
+    add_val("cls", f"uk-button uk-button-{style_} {_size(size)} {_width(width)}".strip(" "), kwargs)  # type: ignore
     return btn(*args, **kwargs)
 
 

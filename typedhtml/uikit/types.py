@@ -2,7 +2,17 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from typing import Literal
+from typing import Literal, Union
+
+from typedhtml.tags import h1, h2, h3, h4, h5, h6
+
+LinkMods = Literal[
+    "uk-link-toggle",
+    "uk-link-reset",
+    "uk-link-heading",
+    "uk-link-muted",
+    "uk-link-text",
+]
 
 Width = Literal[
     "uk-width-1-1",
@@ -50,6 +60,7 @@ Position = Literal[
     "uk-position-z-index",
 ]
 
+HeadingType = Union[h1, h2, h3, h4, h5, h6]
 Heading = Literal["h1", "h2", "h3", "h4", "h5", "h6"]
 Transition = Literal["ease", "ease-in", "ease-out", "ease-in-out"]
 

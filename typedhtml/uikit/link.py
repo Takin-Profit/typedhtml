@@ -3,19 +3,12 @@
 # license that can be found in the LICENSE file.
 
 
-from typing import Any, Literal, Unpack
+from typing import Any, Unpack
 
 from typedhtml.attributes import a_attr
 from typedhtml.tags import a
+from typedhtml.uikit.types import LinkMods
 from typedhtml.uikit.util import add_val
-
-LinkMods = Literal[
-    "uk-link-toggle",
-    "uk-link-reset",
-    "uk-link-heading",
-    "uk-link-muted",
-    "uk-link-text",
-]
 
 
 def link(
