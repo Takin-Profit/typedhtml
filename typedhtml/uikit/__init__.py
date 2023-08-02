@@ -63,18 +63,66 @@ from .scroll import scroll, scrollspy
 from .search import search
 from .section import section
 from .slidenav import slidenav, slidenav_container
+from .sortable import sortable
 
 __all__ = [
-    "width_star",
-    "child_width_star",
-    "width_star_s",
-    "child_width_star_s",
-    "width_star_m",
-    "child_width_star_m",
-    "width_star_l",
-    "child_width_star_l",
-    "width_star_xl",
-    "child_width_star_xl",
+    "sortable",
+    "uk_width_1_1_m",
+    "uk_width_1_2_m",
+    "uk_width_1_3_m",
+    "uk_width_2_3_m",
+    "uk_width_1_4_m",
+    "uk_width_3_4_m",
+    "uk_width_1_5_m",
+    "uk_width_2_5_m",
+    "uk_width_3_5_m",
+    "uk_width_4_5_m",
+    "uk_width_1_6_m",
+    "uk_width_5_6_m",
+    "uk_width_auto_m",
+    "uk_width_expand_m",
+    "uk_width_1_1_s",
+    "uk_width_1_2_s",
+    "uk_width_1_3_s",
+    "uk_width_2_3_s",
+    "uk_width_1_4_s",
+    "uk_width_3_4_s",
+    "uk_width_1_5_s",
+    "uk_width_2_5_s",
+    "uk_width_3_5_s",
+    "uk_width_4_5_s",
+    "uk_width_1_6_s",
+    "uk_width_5_6_s",
+    "uk_width_auto_s",
+    "uk_width_expand_s",
+    "uk_width_1_1_l",
+    "uk_width_1_2_l",
+    "uk_width_1_3_l",
+    "uk_width_2_3_l",
+    "uk_width_1_4_l",
+    "uk_width_3_4_l",
+    "uk_width_1_5_l",
+    "uk_width_2_5_l",
+    "uk_width_3_5_l",
+    "uk_width_4_5_l",
+    "uk_width_1_6_l",
+    "uk_width_5_6_l",
+    "uk_width_auto_l",
+    "uk_width_expand_l",
+    "uk_width_1_1_xl",
+    "uk_width_1_2_xl",
+    "uk_width_1_3_xl",
+    "uk_width_2_3_xl",
+    "uk_width_1_4_xl",
+    "uk_width_3_4_xl",
+    "uk_width_1_5_xl",
+    "uk_width_2_5_xl",
+    "uk_width_3_5_xl",
+    "uk_width_4_5_xl",
+    "uk_width_1_6_xl",
+    "uk_width_5_6_xl",
+    "uk_width_auto_xl",
+    "uk_width_expand_xl",
     "width_small",
     "width_medium",
     "width_large",
@@ -965,14 +1013,62 @@ width_medium = "uk-width-medium"
 width_large = "uk-width-large"
 width_xlarge = "uk-width-xlarge"
 width_2xlarge = "uk-width-2xlarge"
+uk_width_1_1_m = "uk-width-1-1@m"
+uk_width_1_2_m = "uk-width-1-2@m"
+uk_width_1_3_m = "uk-width-1-3@m"
+uk_width_2_3_m = "uk-width-2-3@m"
+uk_width_1_4_m = "uk-width-1-4@m"
+uk_width_3_4_m = "uk-width-3-4@m"
+uk_width_1_5_m = "uk-width-1-5@m"
+uk_width_2_5_m = "uk-width-2-5@m"
+uk_width_3_5_m = "uk-width-3-5@m"
+uk_width_4_5_m = "uk-width-4-5@m"
+uk_width_1_6_m = "uk-width-1-6@m"
+uk_width_5_6_m = "uk-width-5-6@m"
+uk_width_auto_m = "uk-width-auto@m"
+uk_width_expand_m = "uk-width-expand@m"
 
-width_star = "uk-width-*"
-child_width_star = "uk-child-width-*"
-width_star_s = "uk-width-*@s"
-child_width_star_s = "uk-child-width-*@s"
-width_star_m = "uk-width-*@m"
-child_width_star_m = "uk-child-width-*@m"
-width_star_l = "uk-width-*@l"
-child_width_star_l = "uk-child-width-*@l"
-width_star_xl = "uk-width-*@xl"
-child_width_star_xl = "uk-child-width-*@xl"
+uk_width_1_1_s = "uk-width-1-1@s"
+uk_width_1_2_s = "uk-width-1-2@s"
+uk_width_1_3_s = "uk-width-1-3@s"
+uk_width_2_3_s = "uk-width-2-3@s"
+uk_width_1_4_s = "uk-width-1-4@s"
+uk_width_3_4_s = "uk-width-3-4@s"
+uk_width_1_5_s = "uk-width-1-5@s"
+uk_width_2_5_s = "uk-width-2-5@s"
+uk_width_3_5_s = "uk-width-3-5@s"
+uk_width_4_5_s = "uk-width-4-5@s"
+uk_width_1_6_s = "uk-width-1-6@s"
+uk_width_5_6_s = "uk-width-5-6@s"
+uk_width_auto_s = "uk-width-auto@s"
+uk_width_expand_s = "uk-width-expand@s"
+
+uk_width_1_1_l = "uk-width-1-1@l"
+uk_width_1_2_l = "uk-width-1-2@l"
+uk_width_1_3_l = "uk-width-1-3@l"
+uk_width_2_3_l = "uk-width-2-3@l"
+uk_width_1_4_l = "uk-width-1-4@l"
+uk_width_3_4_l = "uk-width-3-4@l"
+uk_width_1_5_l = "uk-width-1-5@l"
+uk_width_2_5_l = "uk-width-2-5@l"
+uk_width_3_5_l = "uk-width-3-5@l"
+uk_width_4_5_l = "uk-width-4-5@l"
+uk_width_1_6_l = "uk-width-1-6@l"
+uk_width_5_6_l = "uk-width-5-6@l"
+uk_width_auto_l = "uk-width-auto@l"
+uk_width_expand_l = "uk-width-expand@l"
+
+uk_width_1_1_xl = "uk-width-1-1@xl"
+uk_width_1_2_xl = "uk-width-1-2@xl"
+uk_width_1_3_xl = "uk-width-1-3@xl"
+uk_width_2_3_xl = "uk-width-2-3@xl"
+uk_width_1_4_xl = "uk-width-1-4@xl"
+uk_width_3_4_xl = "uk-width-3-4@xl"
+uk_width_1_5_xl = "uk-width-1-5@xl"
+uk_width_2_5_xl = "uk-width-2-5@xl"
+uk_width_3_5_xl = "uk-width-3-5@xl"
+uk_width_4_5_xl = "uk-width-4-5@xl"
+uk_width_1_6_xl = "uk-width-1-6@xl"
+uk_width_5_6_xl = "uk-width-5-6@xl"
+uk_width_auto_xl = "uk-width-auto@xl"
+uk_width_expand_xl = "uk-width-expand@xl"
