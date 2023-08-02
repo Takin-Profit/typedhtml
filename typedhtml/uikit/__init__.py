@@ -69,8 +69,10 @@ from .sticky import sticky
 from .subnav import subnav
 from .svg import svg
 from .tab import tab
+from .table import table
 
 __all__ = [
+    "table",
     "tab",
     "svg",
     "subnav",
