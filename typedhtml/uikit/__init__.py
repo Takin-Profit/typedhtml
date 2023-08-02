@@ -66,8 +66,12 @@ from .slidenav import slidenav, slidenav_container
 from .sortable import sortable
 from .spinner import spinner
 from .sticky import sticky
+from .subnav import subnav
+from .svg import svg
 
 __all__ = [
+    "svg",
+    "subnav",
     "sticky",
     "spinner",
     "sortable",
