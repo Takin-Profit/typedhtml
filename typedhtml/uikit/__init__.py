@@ -55,8 +55,21 @@ from .nav import (
     navigation,
 )
 from .offcanvas import offcanvas
+from .overlay import overlay, overlay_icon
 
 __all__ = [
+    "padding",
+    "padding_small",
+    "padding_large",
+    "padding_remove",
+    "padding_remove_top",
+    "padding_remove_bottom",
+    "padding_remove_left",
+    "padding_remove_right",
+    "padding_remove_vertical",
+    "padding_remove_horizontal",
+    "overlay_icon",
+    "overlay",
     "offcanvas",
     "navbar_subtitle",
     "navbar_toggle",
@@ -705,3 +718,15 @@ margin_auto_right_l = "uk-margin-auto-right@l"
 margin_auto_left_xl = "uk-margin-auto-left@xl"
 margin_auto_xl = "uk-margin-auto@xl"
 margin_auto_right_xl = "uk-margin-auto-right@xl"
+
+padding = "uk-padding"
+padding_small = "uk-padding-small"
+padding_large = "uk-padding-large"
+
+padding_remove = "uk-padding-remove"
+padding_remove_top = "uk-padding-remove-top"
+padding_remove_bottom = "uk-padding-remove-bottom"
+padding_remove_left = "uk-padding-remove-left"
+padding_remove_right = "uk-padding-remove-right"
+padding_remove_vertical = "uk-padding-remove-vertical"
+padding_remove_horizontal = "uk-padding-remove-horizontal"
