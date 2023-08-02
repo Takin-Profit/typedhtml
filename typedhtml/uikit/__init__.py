@@ -44,9 +44,24 @@ from .modal import (
     modal_link,
     modal_title,
 )
-from .nav import nav, nav_item
+from .nav import (
+    nav,
+    nav_item,
+    navbar,
+    navbar_align,
+    navbar_item,
+    navbar_subtitle,
+    navbar_toggle,
+    navigation,
+)
 
 __all__ = [
+    "navbar_subtitle",
+    "navbar_toggle",
+    "navbar_item",
+    "navigation",
+    "navbar_align",
+    "navbar",
     "nav",
     "nav_item",
     "modal",
