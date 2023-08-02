@@ -56,8 +56,12 @@ from .nav import (
 )
 from .offcanvas import offcanvas
 from .overlay import overlay, overlay_icon
+from .pagination import pagination
+from .placeholder import placeholder
 
 __all__ = [
+    "placeholder",
+    "pagination",
     "padding",
     "padding_small",
     "padding_large",
