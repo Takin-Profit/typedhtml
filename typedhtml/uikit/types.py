@@ -6,6 +6,8 @@ from typing import Literal, Union
 
 from typedhtml.tags import h1, h2, h3, h4, h5, h6
 
+Inverse = Literal["uk-light", "uk-dark"]
+
 Utility = Literal[
     "uk-float-left",
     "uk-float-right",

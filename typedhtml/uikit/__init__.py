@@ -61,8 +61,13 @@ from .placeholder import placeholder
 from .progress import progress
 from .scroll import scroll, scrollspy
 from .search import search
+from .section import section
+from .slidenav import slidenav, slidenav_container
 
 __all__ = [
+    "slidenav_container",
+    "slidenav",
+    "section",
     "search",
     "scrollspy",
     "scroll",
@@ -894,3 +899,19 @@ transform_origin_bottom_right = "uk-transform-origin-bottom-right"
 
 disabled = "uk-disabled"
 drag = "uk-drag"
+
+light = "uk-light"
+dark = "uk-dark"
+
+width_1_1 = "uk-width-1-1"
+width_1_2 = "uk-width-1-2"
+width_1_3 = "uk-width-1-3"
+width_2_3 = "uk-width-2-3"
+width_1_4 = "uk-width-1-4"
+width_3_4 = "uk-width-3-4"
+width_1_5 = "uk-width-1-5"
+width_2_5 = "uk-width-2-5"
+width_3_5 = "uk-width-3-5"
+width_4_5 = "uk-width-4-5"
+width_1_6 = "uk-width-1-6"
+width_5_6 = "uk-width-5-6"
