@@ -65,6 +65,42 @@ from .section import section
 from .slidenav import slidenav, slidenav_container
 
 __all__ = [
+    "width_star",
+    "child_width_star",
+    "width_star_s",
+    "child_width_star_s",
+    "width_star_m",
+    "child_width_star_m",
+    "width_star_l",
+    "child_width_star_l",
+    "width_star_xl",
+    "child_width_star_xl",
+    "width_small",
+    "width_medium",
+    "width_large",
+    "width_xlarge",
+    "width_2xlarge",
+    "child_width_1_2",
+    "child_width_1_3",
+    "child_width_1_4",
+    "child_width_1_5",
+    "child_width_1_6",
+    "child_width_auto",
+    "child_width_expand",
+    "width_auto",
+    "width_expand",
+    "width_1_1",
+    "width_1_2",
+    "width_1_3",
+    "width_2_3",
+    "width_1_4",
+    "width_3_4",
+    "width_1_5",
+    "width_2_5",
+    "width_3_5",
+    "width_4_5",
+    "width_1_6",
+    "width_5_6",
     "slidenav_container",
     "slidenav",
     "section",
@@ -915,3 +951,28 @@ width_3_5 = "uk-width-3-5"
 width_4_5 = "uk-width-4-5"
 width_1_6 = "uk-width-1-6"
 width_5_6 = "uk-width-5-6"
+width_auto = "uk-width-auto"
+width_expand = "uk-width-expand"
+child_width_1_2 = "uk-child-width-1-2"
+child_width_1_3 = "uk-child-width-1-3"
+child_width_1_4 = "uk-child-width-1-4"
+child_width_1_5 = "uk-child-width-1-5"
+child_width_1_6 = "uk-child-width-1-6"
+child_width_auto = "uk-child-width-auto"
+child_width_expand = "uk-child-width-expand"
+width_small = "uk-width-small"
+width_medium = "uk-width-medium"
+width_large = "uk-width-large"
+width_xlarge = "uk-width-xlarge"
+width_2xlarge = "uk-width-2xlarge"
+
+width_star = "uk-width-*"
+child_width_star = "uk-child-width-*"
+width_star_s = "uk-width-*@s"
+child_width_star_s = "uk-child-width-*@s"
+width_star_m = "uk-width-*@m"
+child_width_star_m = "uk-child-width-*@m"
+width_star_l = "uk-width-*@l"
+child_width_star_l = "uk-child-width-*@l"
+width_star_xl = "uk-width-*@xl"
+child_width_star_xl = "uk-child-width-*@xl"
