@@ -60,8 +60,10 @@ from .pagination import pagination
 from .placeholder import placeholder
 from .progress import progress
 from .scroll import scroll, scrollspy
+from .search import search
 
 __all__ = [
+    "search",
     "scrollspy",
     "scroll",
     "disabled",
