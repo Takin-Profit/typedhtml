@@ -68,8 +68,10 @@ from .spinner import spinner
 from .sticky import sticky
 from .subnav import subnav
 from .svg import svg
+from .tab import tab
 
 __all__ = [
+    "tab",
     "svg",
     "subnav",
     "sticky",
