@@ -59,8 +59,11 @@ from .overlay import overlay, overlay_icon
 from .pagination import pagination
 from .placeholder import placeholder
 from .progress import progress
+from .scroll import scroll, scrollspy
 
 __all__ = [
+    "scrollspy",
+    "scroll",
     "disabled",
     "drag",
     "transform_origin_top_left",
