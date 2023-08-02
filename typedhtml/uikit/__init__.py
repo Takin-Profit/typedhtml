@@ -54,8 +54,10 @@ from .nav import (
     navbar_toggle,
     navigation,
 )
+from .offcanvas import offcanvas
 
 __all__ = [
+    "offcanvas",
     "navbar_subtitle",
     "navbar_toggle",
     "navbar_item",
