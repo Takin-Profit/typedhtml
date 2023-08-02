@@ -58,8 +58,79 @@ from .offcanvas import offcanvas
 from .overlay import overlay, overlay_icon
 from .pagination import pagination
 from .placeholder import placeholder
+from .progress import progress
 
 __all__ = [
+    "disabled",
+    "drag",
+    "transform_origin_top_left",
+    "transform_origin_top_center",
+    "transform_origin_top_right",
+    "transform_origin_center_left",
+    "transform_origin_center_right",
+    "transform_origin_bottom_left",
+    "transform_origin_bottom_center",
+    "transform_origin_bottom_right",
+    "transform_center",
+    "blend_multiply",
+    "blend_screen",
+    "blend_overlay",
+    "blend_darken",
+    "blend_lighten",
+    "blend_color_dodge",
+    "blend_color_burn",
+    "blend_hard_light",
+    "blend_soft_light",
+    "blend_difference",
+    "blend_exclusion",
+    "blend_hue",
+    "blend_saturation",
+    "blend_color",
+    "blend_luminosity",
+    "logo",
+    "dropcap",
+    "box_shadow_hover_small",
+    "box_shadow_hover_medium",
+    "box_shadow_hover_large",
+    "box_shadow_hover_xlarge",
+    "box_shadow_bottom",
+    "box_shadow_small",
+    "box_shadow_medium",
+    "box_shadow_large",
+    "box_shadow_xlarge",
+    "border_pill",
+    "border_circle",
+    "border_rounded",
+    "object_position_top_left",
+    "object_position_top_center",
+    "object_position_top_right",
+    "object_position_center_left",
+    "object_position_center_center",
+    "object_position_center_right",
+    "object_position_bottom_left",
+    "object_position_bottom_center",
+    "object_position_bottom_right",
+    "object_cover",
+    "object_contain",
+    "object_fill",
+    "object_none",
+    "object_scale_down",
+    "responsive_width",
+    "responsive_height",
+    "preserve_width",
+    "inline",
+    "inline_clip",
+    "display_block",
+    "display_inline",
+    "display_inline_block",
+    "resize",
+    "resize_vertical",
+    "overflow_auto",
+    "overflow_hidden",
+    "float_left",
+    "float_right",
+    "clearfix",
+    "progress",
     "placeholder",
     "pagination",
     "padding",
@@ -734,3 +805,87 @@ padding_remove_left = "uk-padding-remove-left"
 padding_remove_right = "uk-padding-remove-right"
 padding_remove_vertical = "uk-padding-remove-vertical"
 padding_remove_horizontal = "uk-padding-remove-horizontal"
+
+float_left = "uk-float-left"
+float_right = "uk-float-right"
+clearfix = "uk-clearfix"
+overflow_hidden = "uk-overflow-hidden"
+overflow_auto = "uk-overflow-auto"
+
+resize = "uk-resize"
+resize_vertical = "uk-resize-vertical"
+
+display_block = "uk-display-block"
+display_inline = "uk-display-inline"
+display_inline_block = "uk-display-inline-block"
+
+inline = "uk-inline"
+inline_clip = "uk-inline-clip"
+
+responsive_width = "uk-responsive-width"
+responsive_height = "uk-responsive-height"
+preserve_width = "uk-preserve-width"
+object_cover = "uk-object-cover"
+object_contain = "uk-object-contain"
+object_fill = "uk-object-fill"
+object_none = "uk-object-none"
+object_scale_down = "uk-object-scale-down"
+
+object_position_top_left = "uk-object-position-top-left"
+object_position_top_center = "uk-object-position-top-center"
+object_position_top_right = "uk-object-position-top-right"
+object_position_center_left = "uk-object-position-center-left"
+object_position_center_center = "uk-object-position-center-center"
+object_position_center_right = "uk-object-position-center-right"
+object_position_bottom_left = "uk-object-position-bottom-left"
+object_position_bottom_center = "uk-object-position-bottom-center"
+object_position_bottom_right = "uk-object-position-bottom-right"
+
+border_rounded = "uk-border-rounded"
+border_circle = "uk-border-circle"
+border_pill = "uk-border-pill"
+
+box_shadow_small = "uk-box-shadow-small"
+box_shadow_medium = "uk-box-shadow-medium"
+box_shadow_large = "uk-box-shadow-large"
+box_shadow_xlarge = "uk-box-shadow-xlarge"
+
+box_shadow_bottom = "uk-box-shadow-bottom"
+
+box_shadow_hover_small = "uk-box-shadow-hover-small"
+box_shadow_hover_medium = "uk-box-shadow-hover-medium"
+box_shadow_hover_large = "uk-box-shadow-hover-large"
+box_shadow_hover_xlarge = "uk-box-shadow-hover-xlarge"
+
+dropcap = "uk-dropcap"
+logo = "uk-logo"
+
+blend_multiply = "uk-blend-multiply"
+blend_screen = "uk-blend-screen"
+blend_overlay = "uk-blend-overlay"
+blend_darken = "uk-blend-darken"
+blend_lighten = "uk-blend-lighten"
+blend_color_dodge = "uk-blend-color-dodge"
+blend_color_burn = "uk-blend-color-burn"
+blend_hard_light = "uk-blend-hard-light"
+blend_soft_light = "uk-blend-soft-light"
+blend_difference = "uk-blend-difference"
+blend_exclusion = "uk-blend-exclusion"
+blend_hue = "uk-blend-hue"
+blend_saturation = "uk-blend-saturation"
+blend_color = "uk-blend-color"
+blend_luminosity = "uk-blend-luminosity"
+
+transform_center = "uk-transform-center"
+
+transform_origin_top_left = "uk-transform-origin-top-left"
+transform_origin_top_center = "uk-transform-origin-top-center"
+transform_origin_top_right = "uk-transform-origin-top-right"
+transform_origin_center_left = "uk-transform-origin-center-left"
+transform_origin_center_right = "uk-transform-origin-center-right"
+transform_origin_bottom_left = "uk-transform-origin-bottom-left"
+transform_origin_bottom_center = "uk-transform-origin-bottom-center"
+transform_origin_bottom_right = "uk-transform-origin-bottom-right"
+
+disabled = "uk-disabled"
+drag = "uk-drag"
