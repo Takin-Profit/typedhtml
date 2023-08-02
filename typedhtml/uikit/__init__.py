@@ -64,8 +64,12 @@ from .search import search
 from .section import section
 from .slidenav import slidenav, slidenav_container
 from .sortable import sortable
+from .spinner import spinner
+from .sticky import sticky
 
 __all__ = [
+    "sticky",
+    "spinner",
     "sortable",
     "uk_width_1_1_m",
     "uk_width_1_2_m",
