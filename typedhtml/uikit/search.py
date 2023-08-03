@@ -22,7 +22,7 @@ def search(
 
     see: `https://getuikit.com/docs/search`
     """
-    _size = f" uk-search-{size_}"
+    _size = f" uk-search-{size_}" if size_ != "default" else ""
     _nav = " uk-search-navbar" if navbar else ""
     _toggle = " uk-search-toggle" if toggle else ""
     _nav_toggle = " uk-navbar-toggle" if navbar_toggle else ""
