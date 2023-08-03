@@ -52,7 +52,7 @@ def _drop(
     animation: Optional[DropAnimation] = None,
     duration: Optional[int] = None,
     offset: Optional[int] = None,
-    **kwargs: Unpack[GLOBAL_ATTR],
+    kwargs: dict[Any, Any] = {},
 ) -> None:
     """Position any element in relation to another element.
 
@@ -122,7 +122,7 @@ def drop(
         animation=animation,
         duration=duration,
         offset=offset,
-        **kwargs,
+        kwargs=kwargs,  # type: ignore
     )
     return div(*args, **kwargs)
 
@@ -176,7 +176,7 @@ def drop_bar(
         animation=animation,
         duration=duration,
         offset=offset,
-        **kwargs,
+        kwargs=kwargs,  # type: ignore
     )
 
     return div(*args, **kwargs)
@@ -218,7 +218,7 @@ def dropdown(
         animation=animation,
         duration=duration,
         offset=offset,
-        **kwargs,
+        kwargs=kwargs,  # type: ignore
     )
 
     return div(*args, **kwargs)
