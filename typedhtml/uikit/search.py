@@ -28,7 +28,6 @@ def search(
     _nav_toggle = " uk-navbar-toggle" if navbar_toggle else ""
     add_val("cls", f"uk-search{_size}{_nav}", kwargs)  # type: ignore
     add_val("aria-label", "Search", kwargs)  # type: ignore
-    a(cls=_toggle, uk_search_icon="" if search_icon else None)  # type: ignore
     _form = form(*args, **kwargs)
     with _form:
         a(cls=f"{_toggle}{_nav_toggle}".strip(), uk_search_icon="" if search_icon else None)  # type: ignore

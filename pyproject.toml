@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "typedhtml"
-version = "0.2.01"
+version = "0.2.13"
 description = "A simple wrapper around https://pypi.org/project/dominate/ That adds Type Hints and other goodies."
 authors = ["g5becks <techstar.dev@hotmail.com>"]
 readme = "README.md"
