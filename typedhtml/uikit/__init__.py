@@ -75,8 +75,39 @@ from .tile import tile
 from .toggle import toggle
 from .tooltip import tooltip
 from .totop import totop
+from .video import video
 
 __all__ = [
+    "hidden",
+    "invisible",
+    "hidden_s",
+    "hidden_m",
+    "hidden_l",
+    "hidden_xl",
+    "visible_s",
+    "visible_m",
+    "visible_l",
+    "visible_xl",
+    "hidden_hover",
+    "hidden_invisible_hover",
+    "hidden_touch",
+    "hidden_notouch",
+    "video",
+    "transition_fade",
+    "transition_scale_up",
+    "transition_scale_down",
+    "transition_slide_top",
+    "transition_slide_bottom",
+    "transition_slide_left",
+    "transition_slide_right",
+    "transition_slide_top_small",
+    "transition_slide_bottom_small",
+    "transition_slide_left_small",
+    "transition_slide_right_small",
+    "transition_slide_top_medium",
+    "transition_slide_bottom_medium",
+    "transition_slide_left_medium",
+    "transition_slide_right_medium",
     "totop",
     "tooltip",
     "toggle",
@@ -1186,3 +1217,38 @@ text_baseline = "uk-text-baseline"
 text_truncate = "uk-text-truncate"
 text_break = "uk-text-break"
 text_nowrap = "uk-text-nowrap"
+
+transition_fade = "uk-transition-fade"
+transition_scale_up = "uk-transition-scale-up"
+transition_scale_down = "uk-transition-scale-down"
+transition_slide_top = "uk-transition-slide-top"
+transition_slide_bottom = "uk-transition-slide-bottom"
+transition_slide_left = "uk-transition-slide-left"
+transition_slide_right = "uk-transition-slide-right"
+transition_slide_top_small = "uk-transition-slide-top-small"
+transition_slide_bottom_small = "uk-transition-slide-bottom-small"
+transition_slide_left_small = "uk-transition-slide-left-small"
+transition_slide_right_small = "uk-transition-slide-right-small"
+transition_slide_top_medium = "uk-transition-slide-top-medium"
+transition_slide_bottom_medium = "uk-transition-slide-bottom-medium"
+transition_slide_left_medium = "uk-transition-slide-left-medium"
+transition_slide_right_medium = "uk-transition-slide-right-medium"
+
+hidden = "uk-hidden"
+invisible = "uk-invisible"
+hidden_s = "uk-hidden@s"
+hidden_m = "uk-hidden@m"
+hidden_l = "uk-hidden@l"
+hidden_xl = "uk-hidden@xl"
+
+
+visible_s = "uk-visible@s"
+visible_m = "uk-visible@m"
+visible_l = "uk-visible@l"
+visible_xl = "uk-visible@xl"
+
+hidden_hover = "uk-hidden-hover"
+hidden_invisible_hover = "uk-hidden-invisible-hover"
+
+hidden_touch = "uk-hidden-touch"
+hidden_notouch = "uk-hidden-notouch"
