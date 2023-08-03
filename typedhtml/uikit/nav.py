@@ -53,7 +53,7 @@ def nav_item(
     _div = " uk-nav-divider" if use_divider else ""
     _header = " uk-nav-header" if is_header else ""
     _active = " uk-active" if is_active else ""
-    add_val("cls", f"_{_active}{_header}{_div}", kwargs)  # type: ignore
+    add_val("cls", f"{_active}{_header}{_div}", kwargs)  # type: ignore
     return li(*args, **kwargs)
 
 
@@ -106,7 +106,7 @@ def navigation(*args: Any, **kwargs: Unpack[GLOBAL_ATTR]) -> ul:
 def navbar_item(
     *args: Any,
     source: str,
-    anchor: str,
+    text: str,
     is_parent: bool = False,
     is_active: bool = False,
     **kwargs: Unpack[GLOBAL_ATTR],
@@ -122,7 +122,7 @@ def navbar_item(
     add_val("cls", f"{_parent}{_active}", kwargs)  # type: ignore
     list_item = li(*args, **kwargs)
     with list_item:
-        a(anchor, href=source)
+        a(text, href=source)
     return list_item
 
 

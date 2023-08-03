@@ -2,15 +2,8 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from typedhtml.uikit import flex
+from typedhtml.document import document as doc
 
-print(
-    flex(
-        classes=[
-            "uk-flex-center",
-            "uk-flex-around@m",
-            "uk-flex-between@m",
-        ],
-        id_="flex",
-    )
-)
+d = doc(title="Hello, world!")
+
+print(d.render())
