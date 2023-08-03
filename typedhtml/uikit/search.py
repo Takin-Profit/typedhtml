@@ -14,6 +14,7 @@ def search(
     search_icon: bool = True,
     navbar: bool = False,
     toggle: bool = False,
+    navbar_toggle: bool = False,
     size_: Literal["default", "large"] = "default",
     **kwargs: Unpack[form_attr],
 ) -> form:
@@ -24,11 +25,13 @@ def search(
     _size = f" uk-search-{size_}"
     _nav = " uk-search-navbar" if navbar else ""
     _toggle = " uk-search-toggle" if toggle else ""
+    _nav_toggle = " uk-navbar-toggle" if navbar_toggle else ""
     add_val("cls", f"uk-search{_size}{_nav}", kwargs)  # type: ignore
     add_val("aria-label", "Search", kwargs)  # type: ignore
+    a(cls=_toggle, uk_search_icon="" if search_icon else None)  # type: ignore
     _form = form(*args, **kwargs)
     with _form:
-        a(cls=f"uk-search-icon{_toggle}") if search_icon else None
+        a(cls=f"{_toggle}{_nav_toggle}".strip(), uk_search_icon="" if search_icon else None)  # type: ignore
         input_(
             cls="uk-search-input",
             type_="search",
