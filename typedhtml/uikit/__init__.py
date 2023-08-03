@@ -72,8 +72,12 @@ from .tab import tab
 from .table import table
 from .thumbnav import thumbnav
 from .tile import tile
+from .toggle import toggle
+from .tooltip import tooltip
 
 __all__ = [
+    "tooltip",
+    "toggle",
     "tile",
     "thumbnav",
     "text_lead",
