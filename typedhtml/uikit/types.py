@@ -8,6 +8,19 @@ from typedhtml.tags import h1, h2, h3, h4, h5, h6
 
 Inverse = Literal["uk-light", "uk-dark"]
 
+Padding = Literal[
+    "uk-padding",
+    "uk-padding-small",
+    "uk-padding-large",
+    "uk-padding-remove",
+    "uk-padding-remove-top",
+    "uk-padding-remove-bottom",
+    "uk-padding-remove-left",
+    "uk-padding-remove-right",
+    "uk-padding-remove-vertical",
+    "uk-padding-remove-horizontal",
+]
+
 Width = Literal[
     "uk-width-auto",
     "uk-width-expand",

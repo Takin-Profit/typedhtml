@@ -71,8 +71,10 @@ from .svg import svg
 from .tab import tab
 from .table import table
 from .thumbnav import thumbnav
+from .tile import tile
 
 __all__ = [
+    "tile",
     "thumbnav",
     "text_lead",
     "text_default",
