@@ -70,8 +70,54 @@ from .subnav import subnav
 from .svg import svg
 from .tab import tab
 from .table import table
+from .thumbnav import thumbnav
 
 __all__ = [
+    "thumbnav",
+    "text_lead",
+    "text_default",
+    "text_large",
+    "text_light",
+    "text_normal",
+    "text_bold",
+    "text_lighter",
+    "text_bolder",
+    "text_italic",
+    "text_capitalize",
+    "text_uppercase",
+    "text_lowercase",
+    "text_decoration_none",
+    "text_muted",
+    "text_emphasis",
+    "text_primary",
+    "text_secondary",
+    "text_success",
+    "text_warning",
+    "text_danger",
+    "text_background",
+    "text_left",
+    "text_right",
+    "text_center",
+    "text_justify",
+    "text_left_s",
+    "text_center_s",
+    "text_right_s",
+    "text_left_m",
+    "text_center_m",
+    "text_right_m",
+    "text_left_l",
+    "text_center_l",
+    "text_right_l",
+    "text_left_xl",
+    "text_center_xl",
+    "text_right_xl",
+    "text_top",
+    "text_middle",
+    "text_bottom",
+    "text_baseline",
+    "text_truncate",
+    "text_break",
+    "text_nowrap",
     "table",
     "tab",
     "svg",
@@ -1084,3 +1130,51 @@ uk_width_1_6_xl = "uk-width-1-6@xl"
 uk_width_5_6_xl = "uk-width-5-6@xl"
 uk_width_auto_xl = "uk-width-auto@xl"
 uk_width_expand_xl = "uk-width-expand@xl"
+
+text_lead = "uk-text-lead"
+text_default = "uk-text-default"
+text_large = "uk-text-large"
+text_light = "uk-text-light"
+text_normal = "uk-text-normal"
+text_bold = "uk-text-bold"
+text_lighter = "uk-text-lighter"
+text_bolder = "uk-text-bolder"
+text_italic = "uk-text-italic"
+text_capitalize = "uk-text-capitalize"
+text_uppercase = "uk-text-uppercase"
+text_lowercase = "uk-text-lowercase"
+text_decoration_none = "uk-text-decoration-none"
+text_muted = "uk-text-muted"
+text_emphasis = "uk-text-emphasis"
+text_primary = "uk-text-primary"
+text_secondary = "uk-text-secondary"
+text_success = "uk-text-success"
+text_warning = "uk-text-warning"
+text_danger = "uk-text-danger"
+text_background = "uk-text-background"
+text_left = "uk-text-left"
+text_right = "uk-text-right"
+text_center = "uk-text-center"
+text_justify = "uk-text-justify"
+text_left_s = "uk-text-left@s"
+text_center_s = "uk-text-center@s"
+text_right_s = "uk-text-right@s"
+
+text_left_m = "uk-text-left@m"
+text_center_m = "uk-text-center@m"
+text_right_m = "uk-text-right@m"
+
+text_left_l = "uk-text-left@l"
+text_center_l = "uk-text-center@l"
+text_right_l = "uk-text-right@l"
+
+text_left_xl = "uk-text-left@xl"
+text_center_xl = "uk-text-center@xl"
+text_right_xl = "uk-text-right@xl"
+text_top = "uk-text-top"
+text_middle = "uk-text-middle"
+text_bottom = "uk-text-bottom"
+text_baseline = "uk-text-baseline"
+text_truncate = "uk-text-truncate"
+text_break = "uk-text-break"
+text_nowrap = "uk-text-nowrap"
