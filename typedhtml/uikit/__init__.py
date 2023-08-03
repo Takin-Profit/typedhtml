@@ -74,8 +74,10 @@ from .thumbnav import thumbnav
 from .tile import tile
 from .toggle import toggle
 from .tooltip import tooltip
+from .totop import totop
 
 __all__ = [
+    "totop",
     "tooltip",
     "toggle",
     "tile",
