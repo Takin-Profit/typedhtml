@@ -11,7 +11,7 @@ from typedhtml.uikit.util import add_val
 
 def search(
     *args: Any,
-    search_icon: bool = True,
+    search_icon: bool = False,
     navbar: bool = False,
     toggle: bool = False,
     navbar_toggle: bool = False,
@@ -30,7 +30,8 @@ def search(
     add_val("aria-label", "Search", kwargs)  # type: ignore
     _form = form(*args, **kwargs)
     with _form:
-        a(cls=f"{_toggle}{_nav_toggle}".strip(), uk_search_icon="" if search_icon else None)  # type: ignore
+        if search_icon:
+            a(cls=f"{_toggle}{_nav_toggle}".strip(), uk_search_icon="" if search_icon else None)  # type: ignore
         input_(
             cls="uk-search-input",
             type_="search",
