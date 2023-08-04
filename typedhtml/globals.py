@@ -129,7 +129,6 @@ class GLOBAL_ATTR(TypedDict, total=False):
     x_model: str
     x_modelable: str
     x_for: str
-    # TODO: Model this correctly to match Alpine x_transition: Union[Literal[True], Optional[list[str]]]
     """Alpine.js transition directives"""
     x_effect: str
     x_ignore: Literal[True]
@@ -137,7 +136,23 @@ class GLOBAL_ATTR(TypedDict, total=False):
     x_ref: str
     x_cloak: Literal[True]
     """hides the element it's attached to until Alpine is fully loaded on the page."""
-    x_teleport: str
+    x_teleport: str  # time in milliseconds
+    x_transition_duration: int  # time in milliseconds
+    x_transition_enter_duration: int  # time in milliseconds
+    x_transition_leave_duration: int  # time in milliseconds
+    x_transition_delay: int  # time in milliseconds
+    x_transition: Literal[""]
+    x_transition_opacity: Literal[""]
+    x_transition_scale: int
+    x_transition_enter_scale: int  # percentage
+    x_transition_leave_scale: int  # percentage
+    x_transition_scale_origin: Literal["top", "right", "bottom", "left"]
+    x_transition_enter: str
+    x_transition_enter_start: str
+    x_transition_enter_end: str
+    x_transition_leave: str
+    x_transition_leave_start: str
+    x_transition_leave_end: str
     x_if: str
     x_id: str
     sse_connect: str
