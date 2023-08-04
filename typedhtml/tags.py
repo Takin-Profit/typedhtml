@@ -14,11 +14,8 @@ from dominate.tags import time_ as time_tag
 from dominate.tags import title as title_tag
 
 from .attributes import *
-from .attributes import (
-    details_attr,
-    meter_attr,  # noqa: F403
-    textarea_attr,
-)
+from .attributes import meter_attr  # noqa: F403
+from .attributes import details_attr, textarea_attr
 from .globals import GLOBAL_ATTR
 
 
@@ -38,8 +35,38 @@ def _mk_key(key: str, val: Any) -> str:
             return f":{_get_attr(val)}"
         case "x_on":
             return f"@{_get_attr(val)}"
+        case "x_transition_duration":
+            return f"x-transition.duration.{val}ms"
+        case "x_transition_enter_duration":
+            return f"x-transition:enter.duration.{val}ms"
+        case "x_transition_leave_duration":
+            return f"x-transition:leave.duration.{val}ms"
+        case "x_transition_delay":
+            return f"x-transition.delay.{val}ms"
         case "x_transition":
-            return f"x-transition.{'.'.join(cast(list[str], val))}"
+            return "x-transition"
+        case "x_transition_opacity":
+            return "x-transition.opacity"
+        case "x_transition_scale":
+            return f"x-transition.scale.{val}" if val else "x-transition.scale"
+        case "x_transition_enter_scale":
+            return f"x-transition:enter.scale.{val}"
+        case "x_transition_leave_scale":
+            return f"x-transition:leave.scale.{val}"
+        case "x_transition_enter":
+            return "x-transition:enter"
+        case "x_transition_enter_start":
+            return "x-transition:enter-start"
+        case "x_transition_enter_end":
+            return "x-transition:enter-end"
+        case "x_transition_leave":
+            return "x-transition:leave"
+        case "x_transition_leave_start":
+            return "x-transition:leave-start"
+        case "x_transition_leave_end":
+            return "x-transition:leave-end"
+        case "x_transition_scale_origin":
+            return f"x-transition.scale-origin.{val}"
         case "hx_on":
             return f"hx-on:{_get_attr(val)}"
         case "xml_base":
