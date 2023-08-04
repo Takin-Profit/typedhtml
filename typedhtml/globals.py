@@ -155,6 +155,21 @@ class GLOBAL_ATTR(TypedDict, total=False):
     x_transition_leave_end: str
     x_if: str
     x_id: str
+    x_mask: str
+    x_mask_dynamic: str
+    x_intersect: str
+    x_intersect_enter: str
+    x_intersect_leave: str
+    x_intersect_once: str
+    x_intersect_half: str
+    x_intersect_full: str
+    x_trap: str
+    x_trap_insert: str
+    x_trap_noscroll: str
+    x_trap_noreturn: str
+    x_collapse: Literal[""]
+    x_collapse_duration: int
+    x_collapse_min: int
     sse_connect: str
     """htmx server sent event connection url"""
     sse_swap: str

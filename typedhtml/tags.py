@@ -67,6 +67,30 @@ def _mk_key(key: str, val: Any) -> str:
             return "x-transition:leave-end"
         case "x_transition_scale_origin":
             return f"x-transition.scale-origin.{val}"
+        case "x_mask_dynamic":
+            return "x-mask:dynamic"
+        case "x_intersect":
+            return "x-intersect"
+        case "x_intersect_enter":
+            return "x-intersect:enter"
+        case "x_intersect_leave":
+            return "x-intersect:leave"
+        case "x_intersect_once":
+            return "x-intersect.once"
+        case "x_intersect_half":
+            return "x-intersect.half"
+        case "x_intersect_full":
+            return "x-intersect.full"
+        case "x_trap_insert":
+            return "x-trap.insert"
+        case "x_trap_noscroll":
+            return "x-trap.noscroll"
+        case "x_trap_noreturn":
+            return "x-trap.noreturn"
+        case "x_collapse_duration":
+            return f"x-collapse.duration.{val}ms"
+        case "x_collapse_min":
+            return f"x-collapse.min.{val}px"
         case "hx_on":
             return f"hx-on:{_get_attr(val)}"
         case "xml_base":
