@@ -26,6 +26,7 @@ from .dotnav import dotnav
 from .drop import drop, drop_bar, dropdown
 from .flex import flex
 from .form import checkbox, fieldset, input_, legend, radio, range_, select, textarea
+from .heading import heading
 from .height import height
 from .icon import icon, icon_nav
 from .image import image
@@ -78,6 +79,7 @@ from .totop import totop
 from .video import video
 
 __all__ = [
+    "heading",
     "hidden",
     "invisible",
     "hidden_s",
