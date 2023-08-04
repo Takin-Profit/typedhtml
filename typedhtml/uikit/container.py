@@ -2,7 +2,7 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from typing import Any, Optional, Unpack
+from typing import Any, Optional, Union, Unpack
 
 from typedhtml.globals import GLOBAL_ATTR
 from typedhtml.tags import div
@@ -11,7 +11,9 @@ from typedhtml.uikit.util import add_val
 
 
 def container(
-    *args: Any, size: Optional[Container] = None, **kwargs: Unpack[GLOBAL_ATTR]
+    *args: Any,
+    size: Optional[Union[Container, str]] = None,
+    **kwargs: Unpack[GLOBAL_ATTR],
 ) -> div:
     """The Container component is a simple wrapper for your site content.
 
