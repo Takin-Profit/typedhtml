@@ -2,7 +2,7 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from typing import Any, Literal, Optional, Unpack
+from typing import Any, Literal, Optional, Union, Unpack
 
 from typedhtml.attributes import a_attr
 from typedhtml.globals import GLOBAL_ATTR
@@ -166,7 +166,7 @@ Icon = Literal[
 def icon(
     *args: Any,
     name: Icon,
-    ratio: Optional[int],
+    ratio: Optional[Union[int, float]] = None,
     is_link: bool = False,
     is_button: bool = False,
     **kwargs: Unpack[a_attr],
