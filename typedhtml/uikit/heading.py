@@ -35,4 +35,5 @@ def heading(
     _div = " uk-heading-divider" if divider else ""
     _line = " uk-heading-line" if line else ""
     add_val("cls", f"uk-heading-{size}{_div}{_line}", kwargs)  # type: ignore
+    kwargs.pop("size", None)  # type: ignore
     return h(*args, size=h_size, **kwargs)
